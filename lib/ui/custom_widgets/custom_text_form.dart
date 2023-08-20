@@ -69,7 +69,7 @@ class CustomTextFormField extends StatelessWidget {
                     const BoxConstraints(minWidth: 0, minHeight: 0),
                 // prefixText: prefixText,
                 enabled: enable,
-                contentPadding: EdgeInsets.symmetric(vertical: 20),
+                contentPadding: const EdgeInsets.symmetric(vertical: 20),
                 // suffixIconConstraints: const BoxConstraints(),
                 suffixIcon:
                     enableSuffixIcon ? Icon(suffixIcon) : const SizedBox(),

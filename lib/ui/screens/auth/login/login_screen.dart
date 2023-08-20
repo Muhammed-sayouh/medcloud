@@ -2,8 +2,10 @@ import 'package:medcloud/helper/import_helper.dart';
 import 'package:medcloud/ui/custom_widgets/country_code_widget.dart';
 import 'package:medcloud/ui/custom_widgets/custom_button.dart';
 import 'package:medcloud/ui/custom_widgets/custom_text_form.dart';
+import 'package:medcloud/ui/screens/auth/forget_password/forget_password_screen.dart';
 import 'package:medcloud/ui/theme/sizes/styles_manager.dart';
-import 'package:medcloud/ui/theme/style/colors.dart';
+
+import '../../../custom_widgets/text_form_icon_widget.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -12,12 +14,13 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScreen(
+        hideBack: true,
         child: Padding(
           padding: commonPaddingHorizental(context),
           child: Column(
             children: [
               SizedBox(
-                height: height(context, 0.1),
+                height: height(context, 0.07),
               ),
               Text(
                 Constants.logIn,
@@ -29,7 +32,7 @@ class LoginScreen extends StatelessWidget {
               CustomTextFormField(
                 hint: Constants.mobileNumber,
                 titleText: Constants.mobileNumber,
-                prefixText: const TextFormIconsWidget(
+                prefixText:  const TextFormIconsWidget(
                   iconData: Icons.phone_android_rounded,
                   extraWidget: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -55,9 +58,12 @@ class LoginScreen extends StatelessWidget {
                 alignment: Constants.getLanguage() == 'ar'
                     ? Alignment.centerLeft
                     : Alignment.centerRight,
-                child: Text(
-                  Constants.forgetPassword,
-                  style: getMediumStyle(),
+                child: InkWell(
+                  onTap: () => Navigators.getTo(context, const ForgetPasswordScreen()),
+                  child: Text(
+                    "${Constants.forgetPassword}?",
+                    style: getMediumStyle(),
+                  ),
                 ),
               ),
               SizedBox(
@@ -74,48 +80,6 @@ class LoginScreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class TextFormIconsWidget extends StatelessWidget {
-  final IconData iconData;
-  final Widget? extraWidget;
-  const TextFormIconsWidget({
-    super.key,
-    required this.iconData,
-    this.extraWidget,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: 8, right: extraWidget == null ? 8 : 0),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Container(
-            width: width(context, 0.075),
-            height: width(context, 0.075),
-            decoration: BoxDecoration(
-              color: AppColors.lightOrangeColor,
-              borderRadius: BorderRadius.circular(5),
-            ),
-            child: Center(
-                child: Icon(
-              iconData,
-              color: AppColors.orangeColor,
-              size: 18,
-            )),
-          ),
-          extraWidget == null
-              ? const SizedBox()
-              : const SmallPadding(
-                  horizental: true,
-                ),
-          extraWidget ?? const SizedBox(),
-        ],
       ),
     );
   }

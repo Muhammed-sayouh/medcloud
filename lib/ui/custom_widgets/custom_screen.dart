@@ -1,20 +1,59 @@
 import 'package:medcloud/helper/import_helper.dart';
+import 'package:medcloud/ui/screens/intro/intro_screen.dart';
+import 'package:medcloud/ui/theme/sizes/styles_manager.dart';
 
 class CustomScreen extends StatelessWidget {
   final Widget child;
-  const CustomScreen({super.key, required this.child});
+  final bool hideBack;
+  final bool hideClose;
+  const CustomScreen(
+      {super.key,
+      required this.child,
+      this.hideBack = false,
+      this.hideClose = false});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          width: width(context, 1),
-          height: height(context, 0.2),
-          child: Image.asset(
-            Constants.headerImage,
-            fit: BoxFit.fill,
-          ),
+        Stack(
+          children: [
+            SizedBox(
+              width: width(context, 1),
+              height: height(context, 0.18),
+              child: Image.asset(
+                Constants.headerImage,
+                fit: BoxFit.fill,
+              ),
+            ),
+            Padding(
+              padding: commonPaddingHorizental(context,
+                  virtical: height(context, 0.07)),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  hideBack
+                      ? const SizedBox()
+                      : InkWell(
+                          onTap: () => Navigators.back(context),
+                          child: const Icon(
+                            Icons.arrow_back_ios_new_rounded,
+                            color: AppColors.whiteColor,
+                          )),
+                  hideClose
+                      ? const SizedBox()
+                      : InkWell(
+                          onTap: () => Navigators.getOffAll(
+                              context, const IntroScreen()),
+                          child: Text(
+                            "Close",
+                            style: getRegularStyle(
+                                color: AppColors.whiteColor, fontSize: 18),
+                          ))
+                ],
+              ),
+            ),
+          ],
         ),
         child
       ],

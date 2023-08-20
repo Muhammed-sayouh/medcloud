@@ -190,7 +190,7 @@ class CountryCodePickerCustomState extends State<CountryCodePickerCustom> {
                     ),
                   ),
                 ),
-                Icon(Icons.keyboard_arrow_down_rounded,size: 18,color: AppColors.lightBlackColor,),
+                const Icon(Icons.keyboard_arrow_down_rounded,size: 18,color: AppColors.lightBlackColor,),
               if (!widget.hideMainText)
                 Flexible(
                   fit: widget.alignLeft ? FlexFit.tight : FlexFit.loose,

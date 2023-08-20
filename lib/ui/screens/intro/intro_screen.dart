@@ -2,7 +2,6 @@ import 'package:medcloud/helper/import_helper.dart';
 import 'package:medcloud/ui/custom_widgets/custom_button.dart';
 import 'package:medcloud/ui/screens/auth/login/login_screen.dart';
 import 'package:medcloud/ui/theme/sizes/styles_manager.dart';
-import 'package:medcloud/ui/theme/style/colors.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({super.key});
@@ -11,6 +10,8 @@ class IntroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScreen(
+        hideBack: true,
+        hideClose: true,
           child: Padding(
         padding: commonPaddingHorizental(context),
         child: Column(
