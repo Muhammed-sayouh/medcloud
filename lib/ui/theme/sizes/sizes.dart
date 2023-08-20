@@ -13,7 +13,7 @@ EdgeInsetsGeometry commonPaddingHorizental(BuildContext context,
   return EdgeInsets.symmetric(
     horizontal: width(
       context,
-      0.03,
+      0.04,
     ),
     vertical: virtical,
   );

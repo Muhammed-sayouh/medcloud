@@ -7,6 +7,8 @@ import 'package:medcloud/helper/localizations_delegates.dart';
 import 'package:medcloud/ui/screens/splash/slapsh_screen.dart';
 import 'package:medcloud/ui/theme/style/theme.dart';
 
+import 'helper/supported_local.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
@@ -29,7 +31,7 @@ class MedCloudApp extends StatelessWidget {
       title: "MedCloud",
       theme: getTheme(),
       home: const SplashScreen(),
-      supportedLocales: const [Locale('ar'), Locale('en')],
+      supportedLocales:  supportedLocales,
       translations: Translation(),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:medcloud/helper/import_helper.dart';
 import 'package:medcloud/ui/custom_widgets/custom_button.dart';
+import 'package:medcloud/ui/screens/auth/login/login_screen.dart';
 import 'package:medcloud/ui/theme/sizes/styles_manager.dart';
 import 'package:medcloud/ui/theme/style/colors.dart';
 
@@ -17,7 +18,13 @@ class IntroScreen extends StatelessWidget {
             SizedBox(
               height: height(context, 0.04),
             ),
-            CustomButton(title: Constants.loginSignUp),
+            CustomButton(
+              title: Constants.loginSignUp,
+              onPressed: () => Navigators.getTo(
+                context,
+                const LoginScreen(),
+              ),
+            ),
             SizedBox(
               height: height(context, 0.04),
             ),
@@ -29,7 +36,8 @@ class IntroScreen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                 child: Column(
                   children: [
                     RowItemIntroScreen(
