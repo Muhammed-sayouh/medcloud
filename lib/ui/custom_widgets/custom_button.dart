@@ -26,7 +26,7 @@ class CustomButton extends StatelessWidget {
       this.isBoldedText = true,
       this.elevation = 0,
       this.onPressed,
-      this.borderRadius = 15,  this.fontSize, this.borderColor})
+      this.borderRadius = 10,  this.fontSize, this.borderColor})
       : super(key: key);
 
   @override

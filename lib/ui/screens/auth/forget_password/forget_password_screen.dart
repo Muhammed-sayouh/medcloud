@@ -3,6 +3,7 @@ import 'package:medcloud/ui/custom_widgets/country_code_widget.dart';
 import 'package:medcloud/ui/custom_widgets/custom_button.dart';
 import 'package:medcloud/ui/custom_widgets/custom_text_form.dart';
 import 'package:medcloud/ui/custom_widgets/text_form_icon_widget.dart';
+import 'package:medcloud/ui/screens/auth/pin_code/pin_code_screen.dart';
 import 'package:medcloud/ui/theme/sizes/styles_manager.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
@@ -55,6 +56,7 @@ class ForgetPasswordScreen extends StatelessWidget {
                 CustomButton(
                   title: Constants.continueString,
                   widthRatio: 0.85,
+                  onPressed: () => Navigators.getTo(context, const PinCodeScreen()),
                 ),
                 
               ],

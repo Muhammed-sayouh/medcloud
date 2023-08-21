@@ -11,6 +11,8 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScreen(
+        hideBack: true,
+        hideClose: true,
         child: Column(
           children: [
             SizedBox(

@@ -97,7 +97,7 @@ class PinCodeTextForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: width(context, 0.12)),
+      padding: EdgeInsets.symmetric(horizontal: width(context, 0.06)),
       child: PinCodeTextField(
         appContext: context,
         validator: validator,
@@ -113,13 +113,14 @@ class PinCodeTextForm extends StatelessWidget {
           shape: PinCodeFieldShape.box,
           fieldWidth: 58,
           fieldHeight: 58,
-          inactiveColor: AppColors.lightGrayColor,
-          activeColor: AppColors.lightGrayColor,
-          activeFillColor: AppColors.lightGrayColor,
-          disabledColor: AppColors.lightGrayColor,
-          inactiveFillColor: AppColors.lightGrayColor,
-          selectedColor: AppColors.lightGrayColor,
-          selectedFillColor: AppColors.lightGrayColor,
+          borderWidth: 0,
+          inactiveColor: AppColors.mediumOrangeColor.withOpacity(0.5),
+          activeColor: AppColors.mediumOrangeColor.withOpacity(0.5),
+          activeFillColor: AppColors.mediumOrangeColor.withOpacity(0.5),
+          disabledColor: AppColors.mediumOrangeColor.withOpacity(0.5),
+          inactiveFillColor: AppColors.mediumOrangeColor.withOpacity(0.5),
+          selectedColor: AppColors.mediumOrangeColor.withOpacity(0.5),
+          selectedFillColor: AppColors.mediumOrangeColor.withOpacity(0.5),
         ),
       ),
     );

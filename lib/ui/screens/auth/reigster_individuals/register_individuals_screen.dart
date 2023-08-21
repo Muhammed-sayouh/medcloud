@@ -2,18 +2,14 @@ import 'package:medcloud/helper/import_helper.dart';
 import 'package:medcloud/ui/custom_widgets/country_code_widget.dart';
 import 'package:medcloud/ui/custom_widgets/custom_button.dart';
 import 'package:medcloud/ui/custom_widgets/custom_text_form.dart';
-import 'package:medcloud/ui/screens/auth/forget_password/forget_password_screen.dart';
-import 'package:medcloud/ui/screens/auth/register_type/register_type_screen.dart';
+import 'package:medcloud/ui/custom_widgets/text_form_icon_widget.dart';
 
-import '../../../custom_widgets/text_form_icon_widget.dart';
-
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class RegisterIndividualsScreen extends StatelessWidget {
+  const RegisterIndividualsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
+    return Scaffold(body:  SingleChildScrollView(
         child: CustomScreen(
           hideBack: true,
           child: Padding(
@@ -60,7 +56,7 @@ class LoginScreen extends StatelessWidget {
                       ? Alignment.centerLeft
                       : Alignment.centerRight,
                   child: InkWell(
-                    onTap: () => Navigators.getTo(context, const ForgetPasswordScreen()),
+                    // onTap: () => Navigators.getTo(context, const ForgetPasswordScreen()),
                     child: Text(
                       Constants.forgetPassword,
                       style: getMediumStyle(),
@@ -74,7 +70,7 @@ class LoginScreen extends StatelessWidget {
                 CustomButton(title: Constants.login,widthRatio: 0.85,),
                 const MediumPadding(),
                 InkWell(
-                  onTap: () => Navigators.getTo(context, const RegisterTypeScreen()),
+                  // onTap: () => Navigators.getTo(context, const RegisterTypeScreen()),
                   child: Text(
                       Constants.createNewAccount,
                       
@@ -85,7 +81,6 @@ class LoginScreen extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      ),);
   }
 }

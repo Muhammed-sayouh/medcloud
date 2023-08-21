@@ -3,6 +3,7 @@ import 'package:medcloud/ui/custom_widgets/country_code_widget.dart';
 import 'package:medcloud/ui/custom_widgets/custom_button.dart';
 import 'package:medcloud/ui/custom_widgets/custom_text_form.dart';
 import 'package:medcloud/ui/custom_widgets/text_form_icon_widget.dart';
+import 'package:medcloud/ui/screens/auth/reset_password/reset_password_screen.dart';
 import 'package:medcloud/ui/theme/sizes/styles_manager.dart';
 
 class PinCodeScreen extends StatelessWidget {
@@ -11,52 +12,74 @@ class PinCodeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScreen(
-        child: Padding(
-          padding: commonPaddingHorizental(context),
-          child: SingleChildScrollView(
+      body: SingleChildScrollView(
+        child: CustomScreen(
+          child: Padding(
+            padding: commonPaddingHorizental(context),
             child: Column(
               children: [
                 SizedBox(
                   height: height(context, 0.07),
                 ),
                 Text(
-                  Constants.forgetPassword,
-
+                  Constants.verificationCode,
                   style: getMediumStyle(fontSize: 34),
                 ),
                 const BigPadding(),
-                Text(
-                  Constants.toChangeEnterMobile,
-                  textAlign: TextAlign.center,
-                  style: getLightStyle(fontSize: 14),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "${Constants.enterOTP} ",
+                      textAlign: TextAlign.center,
+                      style: getLightStyle(fontSize: 14),
+                    ),
+                    Text(
+                      "+966 502491590",
+                      textDirection: TextDirection.ltr,
+                      textAlign: TextAlign.center,
+                      style: getLightStyle(fontSize: 14),
+                    ),
+                  ],
                 ),
                 SizedBox(
                   height: height(context, 0.07),
                 ),
-                CustomTextFormField(
-                  hint: Constants.mobileNumber,
-                  titleText: Constants.mobileNumber,
-                  prefixText: const TextFormIconsWidget(
-                    iconData: Icons.phone_android_rounded,
-                    extraWidget: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [CountryCodeWidget(), Text("|")],
-                    ),
-                  ),
-                ),
-                
-                 
-                   
+                const PinCodeTextForm(),
+              
                 SizedBox(
+                  height: height(context, 0.03),
+                ),
+                  Text(
+                      "1:00",
+                      textAlign: TextAlign.center,
+                      style: getMediumStyle(fontSize: 14),
+                    ),
+                    const MediumPadding(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      Constants.didnotReseive,
+                      textAlign: TextAlign.center,
+                      style: getMediumStyle(fontSize: 14),
+                    ),
+                    Text(
+                      " ${Constants.resend}",
+                      textAlign: TextAlign.center,
+                      style: getMediumStyle(fontSize: 14 , color: AppColors.mediumGrayColor).copyWith(decoration: TextDecoration.underline),
+                    ),
+                  ],
+                ),
+                  SizedBox(
                   height: height(context, 0.04),
                 ),
                 CustomButton(
                   title: Constants.continueString,
                   widthRatio: 0.85,
+                  onPressed: () => Navigators.getTo(context, ResetPasswordScreen()),
                 ),
-                
               ],
             ),
           ),
@@ -65,4 +88,3 @@ class PinCodeScreen extends StatelessWidget {
     );
   }
 }
-

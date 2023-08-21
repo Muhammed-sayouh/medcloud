@@ -46,7 +46,7 @@ class CustomScreen extends StatelessWidget {
                           onTap: () => Navigators.getOffAll(
                               context, const IntroScreen()),
                           child: Text(
-                            "Close",
+                           Constants.close,
                             style: getRegularStyle(
                                 color: AppColors.whiteColor, fontSize: 18),
                           ))

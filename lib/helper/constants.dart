@@ -16,7 +16,9 @@ class Constants {
   static String login = "Login".tr;
   static String mobileNumber = "Mobile Number".tr;
   static String password = "Password".tr;
-  static String forgetPassword = "Forget Password".tr;
+  static String forgetPassword = "Forget Password?".tr;
+
+    static String  forgetPasswordNoQ = "Forget Password".tr;
   static String createNewAccount = "Create new account".tr;
   static String toChangeEnterMobile =
       "To change the password enter the mobile number that you used".tr;
@@ -26,9 +28,27 @@ class Constants {
   static String didnotReseive = "Didn't receive?".tr;
   static String resend = "Resend".tr;
   static String verify = "Verify".tr;
+  static String close = "Close".tr;
+  static String resetPassword = "Reset Password".tr;
+  static String confirmPassword = "Confirm Password".tr;
+  static String reset = "Reset".tr;
+  static String typeOfUse = "Select your type of use".tr;
+  static String individuals = "Individuals".tr;
+  static String business = "Business".tr;
+
+
+
+  
 
 //to update  strings when change language
   static void update() {
+    typeOfUse = "Select your type of use".tr;
+   individuals = "Individuals".tr;
+   business = "Business".tr;
+    reset = "Reset".tr;
+    resetPassword = "Reset Password".tr;
+   confirmPassword = "Confirm Password".tr;
+    close = "Close".tr;
     verificationCode = "Verification Code".tr;
     enterOTP = "Enter OTP code sent to".tr;
     didnotReseive = "Didn't receive?".tr;
@@ -46,7 +66,8 @@ class Constants {
     login = "Login".tr;
     mobileNumber = "Mobile Number".tr;
     password = "Password".tr;
-    forgetPassword = "Forget Password".tr;
+    forgetPassword = "Forget Password?".tr;
+    forgetPasswordNoQ = "Forget Password".tr;
     createNewAccount = "Create new account".tr;
   }
 
