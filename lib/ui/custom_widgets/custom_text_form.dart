@@ -14,9 +14,11 @@ class CustomTextFormField extends StatelessWidget {
   void Function(String)? onChanged;
   final bool obscureText;
   final String? titleText;
+  final String? extraTitleText;
   final Widget? prefixText;
   final bool disableTitle;
   final IconData? suffixIcon;
+  final Color? suffixIconColor;
   final bool enableSuffixIcon;
   final bool enable;
   final TextEditingController? controller;
@@ -34,7 +36,8 @@ class CustomTextFormField extends StatelessWidget {
       this.enableSuffixIcon = false,
       this.controller,
       this.enable = true,
-      this.prefixText})
+      this.prefixText,
+      this.extraTitleText, this.suffixIconColor})
       : super(key: key);
 
   @override
@@ -42,14 +45,25 @@ class CustomTextFormField extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-                 disableTitle
-              ? const SizedBox()
-              : Text(
-                  titleText!,
-                  style: getBoldStyle(
-                      fontSize: 12, color: AppColors.blackColor),
-                ),
-          disableTitle ? const SizedBox() : const SmallPadding(),
+        disableTitle
+            ? const SizedBox()
+            : Row(
+                children: [
+                  Text(
+                    titleText!,
+                    style:
+                        getBoldStyle(fontSize: 12, color: AppColors.blackColor),
+                  ),
+                  extraTitleText == null
+                      ? const SizedBox()
+                      : Text(
+                          " ${extraTitleText!}",
+                          style: getRegularStyle(
+                              fontSize: 8, color: AppColors.blackColor),
+                        ),
+                ],
+              ),
+        disableTitle ? const SizedBox() : const SmallPadding(),
         Center(
           child: Directionality(
             textDirection: TextDirection.ltr,
@@ -57,7 +71,7 @@ class CustomTextFormField extends StatelessWidget {
               controller: controller,
               onChanged: onChanged,
               style: getRegularStyle(
-                    color: AppColors.lightBlackColor, fontSize: 14),
+                  color: AppColors.lightBlackColor, fontSize: 14),
               validator: validator,
               obscureText: obscureText,
               cursorColor: AppColors.blueColor,
@@ -72,7 +86,8 @@ class CustomTextFormField extends StatelessWidget {
                 contentPadding: const EdgeInsets.symmetric(vertical: 20),
                 // suffixIconConstraints: const BoxConstraints(),
                 suffixIcon:
-                    enableSuffixIcon ? Icon(suffixIcon) : const SizedBox(),
+                    enableSuffixIcon ? Icon(suffixIcon , color: suffixIconColor??AppColors.mediumGrayColor
+                    ,) : const SizedBox(),
                 hintMaxLines: 2,
                 hintText: hint,
                 hintStyle: getRegularStyle(
@@ -185,8 +200,7 @@ class CustomProfileTextFormField extends StatelessWidget {
               cursorColor: AppColors.blueColor,
               keyboardType: textInputType,
               maxLines: maxLines,
-              style:
-                  getRegularStyle(color: AppColors.blueColor, fontSize: 13),
+              style: getRegularStyle(color: AppColors.blueColor, fontSize: 13),
               decoration: InputDecoration(
                 isDense: true,
                 prefixIcon: prefixText == null
@@ -204,8 +218,8 @@ class CustomProfileTextFormField extends StatelessWidget {
                 hintMaxLines: 2,
                 hintText: hint,
 
-                hintStyle: getRegularStyle(
-                    color: AppColors.blackColor, fontSize: 10),
+                hintStyle:
+                    getRegularStyle(color: AppColors.blackColor, fontSize: 10),
                 contentPadding: EdgeInsets.zero,
               ),
             ),

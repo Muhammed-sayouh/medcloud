@@ -1,7 +1,6 @@
 import 'package:medcloud/helper/import_helper.dart';
 import 'package:medcloud/ui/custom_widgets/custom_button.dart';
 import 'package:medcloud/ui/screens/intro/intro_screen.dart';
-import 'package:medcloud/ui/theme/sizes/styles_manager.dart';
 import 'package:medcloud/view_model/change_language_view_model.dart';
 
 class SplashScreen extends StatelessWidget {

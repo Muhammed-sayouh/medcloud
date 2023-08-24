@@ -5,6 +5,10 @@ class Constants {
   static const String mainAssetImagesPath = 'assets/icons/';
   static const String logoImage = '${mainAssetImagesPath}logo.png';
   static const String headerImage = '${mainAssetImagesPath}header.png';
+  static const String upoudImage = '${mainAssetImagesPath}upload.png';
+  static const String loaderImage = '${mainAssetImagesPath}loader.gif';
+
+  
 
   //Strings
   static String loginSignUp = "Log in / Sign up".tr;
@@ -18,7 +22,7 @@ class Constants {
   static String password = "Password".tr;
   static String forgetPassword = "Forget Password?".tr;
 
-    static String  forgetPasswordNoQ = "Forget Password".tr;
+  static String forgetPasswordNoQ = "Forget Password".tr;
   static String createNewAccount = "Create new account".tr;
   static String toChangeEnterMobile =
       "To change the password enter the mobile number that you used".tr;
@@ -35,19 +39,39 @@ class Constants {
   static String typeOfUse = "Select your type of use".tr;
   static String individuals = "Individuals".tr;
   static String business = "Business".tr;
-
-
-
-  
+  static String signUp = "Sign Up".tr;
+  static String asIndividuals = "As Individuals".tr;
+  static String optinal = "Optinal".tr;
+  static String haveAccount = "Already have an account?".tr;
+  static String fullName = "Full Name".tr;
+  static String email = "Email".tr;
+  static String asBusiness = "As Business".tr;
+  static String businessLicense = "Business License".tr;
+  static String purchaseEquipmentLicence = "Purchase equipment Licence".tr;
+  static String thankYou = "Thank you".tr;
+  static String doneRegisterText = "doneRegisterText".tr;
+  static String toContactUs = "To Contact Us".tr;
 
 //to update  strings when change language
   static void update() {
+    thankYou = "Thank you".tr;
+    doneRegisterText = "doneRegisterText".tr;
+    toContactUs = "To Contact Us".tr;
+    asBusiness = "As Business".tr;
+    businessLicense = "Business License".tr;
+    purchaseEquipmentLicence = "Purchase equipment Licence".tr;
+    email = "Email".tr;
+    fullName = "Full Name".tr;
+    signUp = "Sign Up".tr;
+    asIndividuals = "As Individuals".tr;
+    optinal = "Optinal".tr;
+    haveAccount = "Already have an account?".tr;
     typeOfUse = "Select your type of use".tr;
-   individuals = "Individuals".tr;
-   business = "Business".tr;
+    individuals = "Individuals".tr;
+    business = "Business".tr;
     reset = "Reset".tr;
     resetPassword = "Reset Password".tr;
-   confirmPassword = "Confirm Password".tr;
+    confirmPassword = "Confirm Password".tr;
     close = "Close".tr;
     verificationCode = "Verification Code".tr;
     enterOTP = "Enter OTP code sent to".tr;

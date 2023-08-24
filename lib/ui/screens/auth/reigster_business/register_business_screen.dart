@@ -4,9 +4,10 @@ import 'package:medcloud/ui/custom_widgets/country_code_widget.dart';
 import 'package:medcloud/ui/custom_widgets/custom_button.dart';
 import 'package:medcloud/ui/custom_widgets/custom_text_form.dart';
 import 'package:medcloud/ui/custom_widgets/text_form_icon_widget.dart';
+import 'package:medcloud/ui/screens/auth/register_done/register_done_screen.dart';
 
-class RegisterIndividualsScreen extends StatelessWidget {
-  const RegisterIndividualsScreen({super.key});
+class RegisterBusinessScreen extends StatelessWidget {
+  const RegisterBusinessScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class RegisterIndividualsScreen extends StatelessWidget {
                 ),
                 const BigPadding(),
                 Text(
-                  Constants.asIndividuals,
+                  Constants.asBusiness,
                   textAlign: TextAlign.center,
                   style: getLightStyle(fontSize: 14),
                 ),
@@ -91,10 +92,37 @@ class RegisterIndividualsScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
+                  height: height(context, 0.02),
+                ),
+                CustomTextFormField(
+                  hint: Constants.businessLicense,
+                  titleText: Constants.businessLicense,
+                  suffixIcon: Icons.cloud_upload_outlined,
+                  suffixIconColor: AppColors.orangeColor,
+                  enableSuffixIcon: true,
+                  prefixText: const TextFormIconsWidget(
+                    iconData: Icons.lock_outlined,
+                  ),
+                ),
+                SizedBox(
+                  height: height(context, 0.02),
+                ),
+                CustomTextFormField(
+                  hint: Constants.purchaseEquipmentLicence,
+                  titleText: Constants.purchaseEquipmentLicence,
+                  suffixIcon: Icons.cloud_upload_outlined,
+                  suffixIconColor: AppColors.orangeColor,
+                  enableSuffixIcon: true,
+                  prefixText: const TextFormIconsWidget(
+                    iconData: Icons.lock_outlined,
+                  ),
+                ),
+                SizedBox(
                   height: height(context, 0.04),
                 ),
                 CustomButton(
-                  title: Constants.login,
+                  onPressed: () => Navigators.getTo(context, const RegsterDoneScreen()),
+                  title: Constants.signUp,
                   widthRatio: 0.85,
                 ),
                 const MediumPadding(),
@@ -106,7 +134,7 @@ class RegisterIndividualsScreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                       style: getMediumStyle(fontSize: 14),
                     ),
-                       InkWell(
+                    InkWell(
                       child: Text(
                         " ${Constants.logIn}",
                         textAlign: TextAlign.center,

@@ -1,6 +1,5 @@
 import 'package:medcloud/helper/import_helper.dart';
 import 'package:medcloud/ui/screens/intro/intro_screen.dart';
-import 'package:medcloud/ui/theme/sizes/styles_manager.dart';
 
 class CustomScreen extends StatelessWidget {
   final Widget child;

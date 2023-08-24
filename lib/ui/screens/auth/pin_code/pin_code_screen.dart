@@ -1,10 +1,7 @@
 import 'package:medcloud/helper/import_helper.dart';
-import 'package:medcloud/ui/custom_widgets/country_code_widget.dart';
 import 'package:medcloud/ui/custom_widgets/custom_button.dart';
 import 'package:medcloud/ui/custom_widgets/custom_text_form.dart';
-import 'package:medcloud/ui/custom_widgets/text_form_icon_widget.dart';
 import 'package:medcloud/ui/screens/auth/reset_password/reset_password_screen.dart';
-import 'package:medcloud/ui/theme/sizes/styles_manager.dart';
 
 class PinCodeScreen extends StatelessWidget {
   const PinCodeScreen({super.key});
@@ -78,7 +75,7 @@ class PinCodeScreen extends StatelessWidget {
                 CustomButton(
                   title: Constants.continueString,
                   widthRatio: 0.85,
-                  onPressed: () => Navigators.getTo(context, ResetPasswordScreen()),
+                  onPressed: () => Navigators.getTo(context, const ResetPasswordScreen()),
                 ),
               ],
             ),
