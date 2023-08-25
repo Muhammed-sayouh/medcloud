@@ -31,14 +31,19 @@ Map<String, String> getArabicLanguage() {
     "As Individuals": "تسجيل افراد",
     "Optinal": "اختياري",
     "Already have an account?": "تمتلك حساب بالفعل ؟",
-    "Full Name":"الاسم بالكامل",
-    "Email":"البريد الإلكتروني",
-        "As Business": "تسجيل شركات",
+    "Full Name": "الاسم بالكامل",
+    "Email": "البريد الإلكتروني",
+    "As Business": "تسجيل شركات",
     "Business License": "رخصة أعمال",
     "Purchase equipment Licence": "ترخيص شراء المعدات",
-        "Thank you": "شكرا لك",
-    "doneRegisterText": "لقد قمت بإنشاء حسابك بنجاح. تسجيلك قيد المراجعة، بمجرد التحقق منه من قبلنا، يمكنك الاستفادة من خدماتنا",
+    "Thank you": "شكرا لك",
+    "doneRegisterText":
+        "لقد قمت بإنشاء حسابك بنجاح. تسجيلك قيد المراجعة، بمجرد التحقق منه من قبلنا، يمكنك الاستفادة من خدماتنا",
     "To Contact Us": "للإتصال بنا",
-  
+    "Category": "الأقسام",
+    "Cart": "السلة",
+    "Profile": "الملف الشخصي",
+    "Home": "الرئيسية",
+     "Wishlist": "المفضلة"
   };
 }

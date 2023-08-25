@@ -37,7 +37,13 @@ Map<String, String> getEnglishLanguage() {
     "Business License": "Business License",
     "Purchase equipment Licence": "Purchase equipment Licence",
     "Thank you": "Thank you",
-    "doneRegisterText": "You have successfully created your account. Your registration is under review, once it is verify from us you can avail our services",
+    "doneRegisterText":
+        "You have successfully created your account. Your registration is under review, once it is verify from us you can avail our services",
     "To Contact Us": "To Contact Us",
+    "Category": "Category",
+    "Cart": "Cart",
+    "Profile": "Profile",
+    "Home": "Home",
+     "Wishlist": "Wishlist",
   };
 }

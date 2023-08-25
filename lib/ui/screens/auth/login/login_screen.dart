@@ -4,6 +4,7 @@ import 'package:medcloud/ui/custom_widgets/custom_button.dart';
 import 'package:medcloud/ui/custom_widgets/custom_text_form.dart';
 import 'package:medcloud/ui/screens/auth/forget_password/forget_password_screen.dart';
 import 'package:medcloud/ui/screens/auth/register_type/register_type_screen.dart';
+import 'package:medcloud/ui/screens/main_screen/main_screen.dart';
 
 import '../../../custom_widgets/text_form_icon_widget.dart';
 
@@ -71,7 +72,9 @@ class LoginScreen extends StatelessWidget {
                   height: height(context, 0.04
                   ),
                 ),
-                CustomButton(title: Constants.login,widthRatio: 0.85,),
+                CustomButton(title: Constants.login,widthRatio: 0.85,
+                onPressed: () => Navigators.getTo(context, const MainScreen()),
+                ),
                 const MediumPadding(),
                 InkWell(
                   onTap: () => Navigators.getTo(context, const RegisterTypeScreen()),

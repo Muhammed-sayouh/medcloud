@@ -5,11 +5,13 @@ class CustomScreen extends StatelessWidget {
   final Widget child;
   final bool hideBack;
   final bool hideClose;
+  final Widget? extraWidget;
   const CustomScreen(
       {super.key,
       required this.child,
       this.hideBack = false,
-      this.hideClose = false});
+      this.hideClose = false,
+      this.extraWidget});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class CustomScreen extends StatelessWidget {
           children: [
             SizedBox(
               width: width(context, 1),
-              height: height(context, 0.18),
+              height: height(context, 0.2),
               child: Image.asset(
                 Constants.headerImage,
                 fit: BoxFit.fill,
@@ -45,13 +47,14 @@ class CustomScreen extends StatelessWidget {
                           onTap: () => Navigators.getOffAll(
                               context, const IntroScreen()),
                           child: Text(
-                           Constants.close,
+                            Constants.close,
                             style: getRegularStyle(
                                 color: AppColors.whiteColor, fontSize: 18),
                           ))
                 ],
               ),
             ),
+            extraWidget??const SizedBox(),
           ],
         ),
         child

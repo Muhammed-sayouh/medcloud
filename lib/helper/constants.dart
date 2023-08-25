@@ -7,8 +7,7 @@ class Constants {
   static const String headerImage = '${mainAssetImagesPath}header.png';
   static const String upoudImage = '${mainAssetImagesPath}upload.png';
   static const String loaderImage = '${mainAssetImagesPath}loader.gif';
-
-  
+  static const String searchImage = '${mainAssetImagesPath}search_icon.png';
 
   //Strings
   static String loginSignUp = "Log in / Sign up".tr;
@@ -51,9 +50,19 @@ class Constants {
   static String thankYou = "Thank you".tr;
   static String doneRegisterText = "doneRegisterText".tr;
   static String toContactUs = "To Contact Us".tr;
+  static String home = "Home".tr;
+  static String category = "Category".tr;
+  static String cart = "Cart".tr;
+  static String profile = "Profile".tr;
+  static String wishlist = "Wishlist".tr;
 
 //to update  strings when change language
   static void update() {
+    wishlist = "Wishlist".tr;
+    home = "Home".tr;
+    category = "Category".tr;
+    cart = "Cart".tr;
+    profile = "Profile".tr;
     thankYou = "Thank you".tr;
     doneRegisterText = "doneRegisterText".tr;
     toContactUs = "To Contact Us".tr;
