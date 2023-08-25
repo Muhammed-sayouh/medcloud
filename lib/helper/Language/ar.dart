@@ -44,6 +44,13 @@ Map<String, String> getArabicLanguage() {
     "Cart": "السلة",
     "Profile": "الملف الشخصي",
     "Home": "الرئيسية",
-     "Wishlist": "المفضلة"
+     "Wishlist": "المفضلة",
+        "Clinics": "العيادات",
+    "Doctors": "الأطباء",
+    "Best Products": "افضل المنتجات",
+    "New Arrival": "وصل حديثا",
+    "View All":"مشاهدة الكل",
+    "Add to Cart":"أضف الي السلة",
+    "Search product, clinic or doctor":"البحث عن منتج أو عيادة أو طبيب",
   };
 }

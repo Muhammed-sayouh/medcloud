@@ -44,6 +44,13 @@ Map<String, String> getEnglishLanguage() {
     "Cart": "Cart",
     "Profile": "Profile",
     "Home": "Home",
-     "Wishlist": "Wishlist",
+    "Wishlist": "Wishlist",
+    "Clinics": "Clinics",
+    "Doctors": "Doctors",
+    "Best Products": "Best Products",
+    "New Arrival": "New Arrival",
+    "View All":"View All",
+    "Add to Cart":"Add to Cart",
+    "Search product, clinic or doctor":"Search product, clinic or doctor",
   };
 }

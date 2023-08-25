@@ -14,12 +14,12 @@ class TitleWdget extends StatelessWidget {
       children: [
         Text(
           title,
-          style: getMediumStyle(color: AppColors.blackColor, fontSize: 20),
+          style: getMediumStyle(color: AppColors.blackColor, fontSize: 18),
         ),
         InkWell(
           onTap: onTap,
           child: Text(subTitle,
-          style: getMediumStyle(color: AppColors.mediumOrangeColor, fontSize: 15),),
+          style: getMediumStyle(color: AppColors.mediumOrangeColor, fontSize: 13),),
         ),
       ],
     );

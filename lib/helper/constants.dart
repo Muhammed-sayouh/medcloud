@@ -55,9 +55,25 @@ class Constants {
   static String cart = "Cart".tr;
   static String profile = "Profile".tr;
   static String wishlist = "Wishlist".tr;
+  static String clinics = "Clinics".tr;
+  static String doctors = "Doctors".tr;
+  static String bestProducts = "Best Products".tr;
+  static String newArrival = "New Arrival".tr;
+  static String viewAll = "View All".tr;
+  static String addToCart = "Add to Cart".tr;
+  static String hintSearch = "Search product, clinic or doctor".tr;
+
+  
 
 //to update  strings when change language
   static void update() {
+    hintSearch = "Search product, clinic or doctor".tr;
+     addToCart = "Add to Cart".tr;
+    viewAll = "View All".tr;
+    clinics = "Clinics".tr;
+    doctors = "Doctors".tr;
+    bestProducts = "Best Products".tr;
+    newArrival = "New Arrival".tr;
     wishlist = "Wishlist".tr;
     home = "Home".tr;
     category = "Category".tr;

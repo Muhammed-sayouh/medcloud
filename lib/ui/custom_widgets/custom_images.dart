@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:medcloud/helper/import_helper.dart';
 
 class CustomAssetImage extends StatelessWidget {
   final double? height;
@@ -27,40 +28,40 @@ class CustomAssetImage extends StatelessWidget {
   }
 }
 
-// class CustomNetworkImage extends StatelessWidget {
-//   final double? height;
-//   final double? width;
-//   final String imagePath;
-//   const CustomNetworkImage({
-//     Key? key,
-//     this.height,
-//     this.width,
-//     required this.imagePath,
-//   }) : super(key: key);
+class CustomNetworkImage extends StatelessWidget {
+  final double? height;
+  final double? width;
+  final String imagePath;
+  const CustomNetworkImage({
+    Key? key,
+    this.height,
+    this.width,
+    required this.imagePath,
+  }) : super(key: key);
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return SizedBox(
-//       height: height,
-//       width: width,
-//       child: FadeInImage.assetNetwork(
-//         image: imagePath,
-//         fit: BoxFit.fill,
-//         placeholder: Constants.spinnerLoader,
-//         placeholderFit: BoxFit.scaleDown,
-//         imageErrorBuilder: (BuildContext context, x, u) => Container(
-//             color: AppColors.wihteColor,
-//             child: Padding(
-//               padding: const EdgeInsets.all(8.0),
-//               child: Image.asset(
-//                 Constants.logoWhiteBG,
-//                 fit: BoxFit.fill,
-//               ),
-//             )),
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: height,
+      width: width,
+      child: FadeInImage.assetNetwork(
+        image: imagePath,
+        fit: BoxFit.fill,
+        placeholder: Constants.loaderImage,
+        placeholderFit: BoxFit.scaleDown,
+        imageErrorBuilder: (BuildContext context, x, u) => Container(
+            color: AppColors.whiteColor,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Image.asset(
+                Constants.logoImage,
+                fit: BoxFit.fill,
+              ),
+            )),
+      ),
+    );
+  }
+}
 
 // class CustomNetworkMemoryImage extends StatelessWidget {
 //   final double? height;

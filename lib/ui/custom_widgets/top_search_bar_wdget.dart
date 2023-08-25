@@ -54,7 +54,9 @@ class TopSearchBarWdget extends StatelessWidget {
                 ),
                 Expanded(
                     child: TextFormField(
-                  decoration: const InputDecoration(
+                  decoration:  InputDecoration(
+                    hintText: Constants.hintSearch,
+                    hintStyle:getRegularStyle(color: AppColors.lightGrayColor) ,
                       border: InputBorder.none,
                       errorBorder: InputBorder.none,
                       enabledBorder: InputBorder.none,
@@ -62,7 +64,7 @@ class TopSearchBarWdget extends StatelessWidget {
                       disabledBorder: InputBorder.none,
                       focusedErrorBorder: InputBorder.none,
                       isDense: true,
-                      contentPadding: EdgeInsets.symmetric(horizontal: 10)),
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 10)),
                 )),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
