@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:medcloud/helper/import_helper.dart';
+import 'package:medcloud/ui/screens/categories/categories_screen.dart';
 import 'package:medcloud/ui/screens/home/home_screen.dart';
 
 /// Flutter code sample for [BottomNavigationBar].
@@ -18,10 +19,7 @@ class _MainScreenState extends State<MainScreen> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+    CategoriesScreen(),
     Text(
       'Index 2: School',
       style: optionStyle,

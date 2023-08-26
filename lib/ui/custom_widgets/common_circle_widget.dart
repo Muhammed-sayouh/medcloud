@@ -28,13 +28,13 @@ class CommonCircleWidget extends StatelessWidget {
         ),
       ),
       SizedBox(
-          width: width(context, 0.2),
+          width: width(context, 0.25),
           child: Text(
             title,
             maxLines: 2,
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
-            style: getRegularStyle(fontSize: 10),
+            style: getRegularStyle(fontSize: 12).copyWith(height: 1.7),
           ))
     ]);
   }

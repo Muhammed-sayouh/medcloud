@@ -39,7 +39,7 @@ class ProductItemWidget extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(5.0),
+                    padding:  EdgeInsets.symmetric(horizontal: width(context, 0.02),vertical: 5),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [

@@ -62,11 +62,35 @@ class Constants {
   static String viewAll = "View All".tr;
   static String addToCart = "Add to Cart".tr;
   static String hintSearch = "Search product, clinic or doctor".tr;
+  static String genral = "General".tr;
+  static String sortBy = "Sort By".tr;
+  static String highRating = "High Rating".tr;
+  static String priceHighToLow = "Price (High To Low)".tr;
+  static String priceLowToHigh = "Price (Low To High)".tr;
+  static String mostPopular = "Most Popular".tr;
+  static String filterBy = "Filter By".tr;
+  static String price = "Price".tr;
+  static String brand = "Brand".tr;
+  static String countryOfOrigin = "Country of Origin".tr;
+  static String clear = "Clear".tr;
+  static String apply = "Apply".tr;
 
   
 
 //to update  strings when change language
   static void update() {
+    sortBy = "Sort By".tr;
+highRating = "High Rating".tr;
+priceHighToLow = "Price (High To Low)".tr;
+priceLowToHigh = "Price (Low To High)".tr;
+mostPopular = "Most Popular".tr;
+filterBy = "Filter By".tr;
+price = "Price".tr;
+brand = "Brand".tr;
+countryOfOrigin = "Country of Origin".tr;
+clear = "Clear".tr;
+apply = "Apply".tr;
+    genral = "General".tr;
     hintSearch = "Search product, clinic or doctor".tr;
      addToCart = "Add to Cart".tr;
     viewAll = "View All".tr;

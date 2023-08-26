@@ -1,14 +1,19 @@
 import 'package:medcloud/helper/import_helper.dart';
 
 class TopSearchBarWdget extends StatelessWidget {
+  final bool hideIcon;
+  final IconData? changeDefultIcon;
+  final void Function()? onTap;
   const TopSearchBarWdget({
     super.key,
+    this.hideIcon = false,
+    this.changeDefultIcon, this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: height(context, 0.11)),
+      padding: EdgeInsets.only(top: height(context, 0.12)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -54,9 +59,10 @@ class TopSearchBarWdget extends StatelessWidget {
                 ),
                 Expanded(
                     child: TextFormField(
-                  decoration:  InputDecoration(
-                    hintText: Constants.hintSearch,
-                    hintStyle:getRegularStyle(color: AppColors.lightGrayColor) ,
+                  decoration: InputDecoration(
+                      hintText: Constants.hintSearch,
+                      hintStyle:
+                          getRegularStyle(color: AppColors.lightGrayColor),
                       border: InputBorder.none,
                       errorBorder: InputBorder.none,
                       enabledBorder: InputBorder.none,
@@ -64,7 +70,8 @@ class TopSearchBarWdget extends StatelessWidget {
                       disabledBorder: InputBorder.none,
                       focusedErrorBorder: InputBorder.none,
                       isDense: true,
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 10)),
+                      contentPadding:
+                          const EdgeInsets.symmetric(horizontal: 10)),
                 )),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -77,14 +84,21 @@ class TopSearchBarWdget extends StatelessWidget {
               ]),
             ),
           ),
-          const MediumPadding(
-            horizental: true,
-          ),
-          const Icon(
-            Icons.notifications,
-            color: AppColors.whiteColor,
-            size: 30,
-          ),
+          hideIcon
+              ? const SizedBox()
+              : const MediumPadding(
+                  horizental: true,
+                ),
+          hideIcon
+              ? const SizedBox()
+              : InkWell(
+                onTap:onTap,
+                child: Icon(
+                    changeDefultIcon ?? Icons.notifications,
+                    color: AppColors.whiteColor,
+                    size: 30,
+                  ),
+              ),
         ],
       ),
     );

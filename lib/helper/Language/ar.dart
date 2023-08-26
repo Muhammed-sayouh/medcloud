@@ -52,5 +52,18 @@ Map<String, String> getArabicLanguage() {
     "View All":"مشاهدة الكل",
     "Add to Cart":"أضف الي السلة",
     "Search product, clinic or doctor":"البحث عن منتج أو عيادة أو طبيب",
+    "General": "عام",
+     "Sort By": "فرز حسب",
+    "High Rating":"التقييم العالي",
+    "Price (High To Low)":  "السعر (من الأعلى إلى الأقل)",
+    "Price (Low To High)":  "السعر (من الأقل إلى الأعلي)",
+    "Most Popular": "الأكثر شعبية",
+    "Filter By": "تصفية حسب",
+    "Price": "السعر",
+    "Brand": "العلامة التجارية",
+    "Country of Origin": "بلد المنشأ",
+    "Clear": "مسح",
+    "Apply": "موافقة",
+
   };
 }

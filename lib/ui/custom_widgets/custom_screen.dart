@@ -6,12 +6,13 @@ class CustomScreen extends StatelessWidget {
   final bool hideBack;
   final bool hideClose;
   final Widget? extraWidget;
+  final bool removebottomPaddng;
   const CustomScreen(
       {super.key,
       required this.child,
       this.hideBack = false,
       this.hideClose = false,
-      this.extraWidget});
+      this.extraWidget,  this.removebottomPaddng =false});
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +29,12 @@ class CustomScreen extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: commonPaddingHorizental(context,
-                  virtical: height(context, 0.07)),
+              padding: EdgeInsets.only(
+                left: width(context, 0.04),
+                right: width(context, 0.04),
+                top: height(context, 0.07),
+                bottom:removebottomPaddng?0 :height(context, 0.07),
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
