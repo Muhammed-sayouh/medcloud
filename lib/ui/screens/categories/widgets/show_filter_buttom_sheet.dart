@@ -55,45 +55,48 @@ void showFilterButtomSheet(BuildContext context) {
               ),
               const SmallPadding(),
               const FilteredByWidgets(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                    onTap: () => Navigators.back(context),
-                    child: Container(
+              Padding(
+                padding: commonPaddingHorizental(context),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    InkWell(
+                      onTap: () => Navigators.back(context),
+                      child: Container(
+                        height: height(context, 0.055),
+                        width: width(context, 0.4),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(
+                            color: AppColors.purpleColor,
+                          ),
+                        ),
+                        child: Center(
+                          child: Text(
+                            Constants.clear,
+                            style: getMediumStyle(color: AppColors.purpleColor),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
                       height: height(context, 0.055),
                       width: width(context, 0.4),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
+                       
                           color: AppColors.purpleColor,
-                        ),
+                  
                       ),
                       child: Center(
                         child: Text(
-                          Constants.clear,
-                          style: getMediumStyle(color: AppColors.purpleColor),
+                          Constants.apply,
+                          style: getMediumStyle(color: AppColors.whiteColor),
                         ),
                       ),
                     ),
-                  ),
-                  Container(
-                    height: height(context, 0.055),
-                    width: width(context, 0.4),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                     
-                        color: AppColors.purpleColor,
-                
-                    ),
-                    child: Center(
-                      child: Text(
-                        Constants.apply,
-                        style: getMediumStyle(color: AppColors.whiteColor),
-                      ),
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               )
             ],
           ),

@@ -7,12 +7,16 @@ class CustomScreen extends StatelessWidget {
   final bool hideClose;
   final Widget? extraWidget;
   final bool removebottomPaddng;
+  final String? title;
+  final Widget? headerWidget;
   const CustomScreen(
       {super.key,
       required this.child,
       this.hideBack = false,
       this.hideClose = false,
-      this.extraWidget,  this.removebottomPaddng =false});
+      this.extraWidget,
+      this.removebottomPaddng = false,
+      this.title, this.headerWidget});
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +24,17 @@ class CustomScreen extends StatelessWidget {
       children: [
         Stack(
           children: [
+        headerWidget==null? const SizedBox():   Container(
+              height: height(context, 0.24),
+              width: width(context, 1),
+              color: AppColors.whiteColor,
+              child: Column(
+                children: [
+                  Spacer(),
+                  headerWidget!,
+                ],
+              ),
+            ),
             SizedBox(
               width: width(context, 1),
               height: height(context, 0.2),
@@ -33,7 +48,7 @@ class CustomScreen extends StatelessWidget {
                 left: width(context, 0.04),
                 right: width(context, 0.04),
                 top: height(context, 0.07),
-                bottom:removebottomPaddng?0 :height(context, 0.07),
+                bottom: removebottomPaddng ? 0 : height(context, 0.07),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -46,6 +61,15 @@ class CustomScreen extends StatelessWidget {
                             Icons.arrow_back_ios_new_rounded,
                             color: AppColors.whiteColor,
                           )),
+                  title == null
+                      ? const SizedBox()
+                      : Center(
+                          child: Text(
+                            Constants.wishlist,
+                            style: getMediumStyle(
+                                color: AppColors.whiteColor, fontSize: 20),
+                          ),
+                        ),
                   hideClose
                       ? const SizedBox()
                       : InkWell(
@@ -59,7 +83,7 @@ class CustomScreen extends StatelessWidget {
                 ],
               ),
             ),
-            extraWidget??const SizedBox(),
+            extraWidget ?? const SizedBox(),
           ],
         ),
         child

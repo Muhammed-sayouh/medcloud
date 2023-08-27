@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:medcloud/helper/import_helper.dart';
+import 'package:medcloud/ui/screens/cart/cart_screen.dart';
 import 'package:medcloud/ui/screens/categories/categories_screen.dart';
 import 'package:medcloud/ui/screens/home/home_screen.dart';
+import 'package:medcloud/ui/screens/wishlist/wishlist_screen.dart';
 
 /// Flutter code sample for [BottomNavigationBar].
 
@@ -20,14 +22,8 @@ class _MainScreenState extends State<MainScreen> {
   static const List<Widget> _widgetOptions = <Widget>[
     HomeScreen(),
     CategoriesScreen(),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    CartScreen(),
+    WishlistScreen(),
     Text(
       'Index 2: School',
       style: optionStyle,
@@ -43,6 +39,8 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
+
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
@@ -90,7 +88,7 @@ class _MainScreenState extends State<MainScreen> {
                 label: Constants.wishlist,
               ),
               BottomNavigationBarItem(
-                icon: const Icon(Icons.shopping_cart),
+                icon: const Icon(Icons.person),
                 label: Constants.profile,
               ),
             ],
