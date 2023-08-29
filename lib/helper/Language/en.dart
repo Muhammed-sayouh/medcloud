@@ -64,5 +64,14 @@ Map<String, String> getEnglishLanguage() {
     "Country of Origin": "Country of Origin",
     "Clear": "Clear",
     "Apply": "Apply",
+    "Want Free Shipping? Add": "Want Free Shipping? Add",
+    "more": "more",
+    "SAR": "SAR",
+    "Products": "Products",
+    "Checkout": "Checkout",
+    "Address": "Address",
+    "Confirmation": "Confirmation",
+    "You have no registered address": "You have no registered address",
+    "Add New Address": "Add New Address",
   };
 }

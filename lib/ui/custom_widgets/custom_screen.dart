@@ -65,7 +65,7 @@ class CustomScreen extends StatelessWidget {
                       ? const SizedBox()
                       : Center(
                           child: Text(
-                            Constants.wishlist,
+                            title!,
                             style: getMediumStyle(
                                 color: AppColors.whiteColor, fontSize: 20),
                           ),

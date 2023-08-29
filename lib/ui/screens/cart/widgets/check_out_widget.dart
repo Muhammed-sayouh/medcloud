@@ -1,5 +1,6 @@
 import 'package:medcloud/helper/import_helper.dart';
 import 'package:medcloud/ui/custom_widgets/custom_button.dart';
+import 'package:medcloud/ui/screens/add_new_address/add_new_address_screen.dart';
 
 class CheckOutWidget extends StatelessWidget {
   const CheckOutWidget({
@@ -30,7 +31,7 @@ class CheckOutWidget extends StatelessWidget {
                   style: getRegularStyle(fontSize: 18),
                 ),
                 Text(
-                  '80 SR',
+                  '80 ${Constants.sar}',
                   style: getRegularStyle(
                       fontSize: 18, color: AppColors.purpleColor),
                 ),
@@ -39,8 +40,9 @@ class CheckOutWidget extends StatelessWidget {
             SizedBox(
               height: height(context, 0.03),
             ),
-            const CustomButton(
-              title: "Checkout",
+             CustomButton(
+              onPressed: () => Navigators.getTo(context, const AddNewAddressScreen()),
+              title: Constants.checkout,
               widthRatio: 0.8,
               hightRatio: 0.06,
             )

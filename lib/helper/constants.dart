@@ -74,25 +74,41 @@ class Constants {
   static String countryOfOrigin = "Country of Origin".tr;
   static String clear = "Clear".tr;
   static String apply = "Apply".tr;
-
-  
+  static String wantFreeShippingAdd = "Want Free Shipping? Add".tr;
+  static String more = "more".tr;
+  static String sar = "SAR".tr;
+  static String products = "Products".tr;
+  static String checkout = "Checkout".tr;
+  static String address = "Address".tr;
+  static String confirmation = "Confirmation".tr;
+  static String noAddress = "You have no registered address".tr;
+  static String addAddress = "Add New Address".tr;
 
 //to update  strings when change language
   static void update() {
+    wantFreeShippingAdd = "Want Free Shipping? Add".tr;
+    more = "more".tr;
+    sar = "SAR".tr;
+    products = "Products".tr;
+    checkout = "Checkout".tr;
+    address = "Address".tr;
+    confirmation = "Confirmation".tr;
+    noAddress = "You have no registered address".tr;
+    addAddress = "Add New Address".tr;
     sortBy = "Sort By".tr;
-highRating = "High Rating".tr;
-priceHighToLow = "Price (High To Low)".tr;
-priceLowToHigh = "Price (Low To High)".tr;
-mostPopular = "Most Popular".tr;
-filterBy = "Filter By".tr;
-price = "Price".tr;
-brand = "Brand".tr;
-countryOfOrigin = "Country of Origin".tr;
-clear = "Clear".tr;
-apply = "Apply".tr;
+    highRating = "High Rating".tr;
+    priceHighToLow = "Price (High To Low)".tr;
+    priceLowToHigh = "Price (Low To High)".tr;
+    mostPopular = "Most Popular".tr;
+    filterBy = "Filter By".tr;
+    price = "Price".tr;
+    brand = "Brand".tr;
+    countryOfOrigin = "Country of Origin".tr;
+    clear = "Clear".tr;
+    apply = "Apply".tr;
     genral = "General".tr;
     hintSearch = "Search product, clinic or doctor".tr;
-     addToCart = "Add to Cart".tr;
+    addToCart = "Add to Cart".tr;
     viewAll = "View All".tr;
     clinics = "Clinics".tr;
     doctors = "Doctors".tr;

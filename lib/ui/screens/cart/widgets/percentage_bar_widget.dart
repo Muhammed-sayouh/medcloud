@@ -14,7 +14,13 @@ class PercentageBarWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-          Text("Want Free Shipping? Add SR 120.84 more",style: getRegularStyle(fontSize: 12),),
+          Row(
+            children: [
+              Text(Constants.wantFreeShippingAdd,style: getRegularStyle(fontSize: 12),),
+              Text(" 120 ${Constants.sar} ",style: getRegularStyle(fontSize: 12,color: AppColors.orangeColor),),
+              Text(Constants.more,style: getRegularStyle(fontSize: 12),),
+            ],
+          ),
             const SmallPadding(),
                LinearPercentIndicator(
                 padding: EdgeInsets.zero,
