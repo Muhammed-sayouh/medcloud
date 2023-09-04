@@ -1,17 +1,17 @@
 import 'package:medcloud/helper/import_helper.dart';
 
-
 class StepProgressView extends StatelessWidget {
   final double width;
 
   final List<String> titles;
   final int curStep;
   final Color activeColor;
-  final Color inactiveColor = AppColors.lightGrayColor;
+  final Color inactiveColor;
   final double lineWidth = 3.0;
 
   const StepProgressView(
       {super.key,
+      this.inactiveColor = AppColors.lightGrayColor,
       required this.width,
       required this.titles,
       required this.curStep,
@@ -23,13 +23,22 @@ class StepProgressView extends StatelessWidget {
         width: width,
         child: Column(
           children: <Widget>[
-            Row(
-             
-              children: _iconViews(),
+            Padding(
+              padding: EdgeInsets.only(
+                left: Constants.getLanguage() == 'ar'
+                    ? MediaQuery.of(context).size.width * 0.015
+                    : MediaQuery.of(context).size.width * 0.035,
+                right: Constants.getLanguage() == 'ar'
+                    ? MediaQuery.of(context).size.width * 0.028
+                    : MediaQuery.of(context).size.width * 0.065,
+              ),
+              child: Row(
+                children: _iconViews(),
+              ),
             ),
-            const SizedBox(
-              height: 8,
-            ),
+            // const SizedBox(
+            //   height: 8,
+            // ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: _titleViews(),
@@ -47,15 +56,20 @@ class StepProgressView extends StatelessWidget {
 
       list.add(
         Container(
-          width: 15.0,
-          height: 15.0,
           padding: const EdgeInsets.all(0),
           decoration: BoxDecoration(
             color: circleColor,
-            borderRadius: const BorderRadius.all(Radius.circular(22.0)),
+            shape: BoxShape.circle,
             border: Border.all(
               color: circleColor,
               width: 2.0,
+            ),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(6.0),
+            child: Text(
+              "${i + 1}",
+              style: getMediumStyle(color: AppColors.whiteColor),
             ),
           ),
         ),
@@ -80,7 +94,8 @@ class StepProgressView extends StatelessWidget {
       list.add(
         Text(
           text,
-          style: getMediumStyle(color: i == 0 ? AppColors.orangeColor : AppColors.lightGrayColor),
+          style: getMediumStyle(
+              color: i == 0 ? AppColors.orangeColor : inactiveColor),
         ),
       );
     });

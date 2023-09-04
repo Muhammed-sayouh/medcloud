@@ -1,6 +1,3 @@
-import 'dart:ui' as ui;
-
-import 'package:flutter/cupertino.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -8,7 +5,9 @@ import 'dart:async';
 import 'package:location/location.dart' as location_plugin;
 import 'package:medcloud/helper/import_helper.dart';
 import 'package:medcloud/ui/custom_widgets/custom_button.dart';
-import 'package:medcloud/ui/screens/map/search_location_widget.dart';
+import 'package:medcloud/ui/screens/map/widgets/my_location_widget.dart';
+import 'package:medcloud/ui/screens/map/widgets/search_location.dart';
+import 'package:medcloud/ui/screens/map/widgets/show_address_buttom_sheet.dart';
 
 class MapScreen extends StatefulWidget {
   const MapScreen({Key? key}) : super(key: key);
@@ -32,8 +31,6 @@ class _MapScreenState extends State<MapScreen> {
   location_plugin.LocationData? _locationData;
 
   var location = location_plugin.Location();
-
-  bool showSearch = false;
 
   Marker marker = const Marker(
     markerId: MarkerId("1"),
@@ -167,90 +164,49 @@ class _MapScreenState extends State<MapScreen> {
                         child: Padding(
                           padding: const EdgeInsets.symmetric(vertical: 30),
                           child: CustomButton(
-                            title: Constants.apply,
-                            onPressed: () {},
-                          ),
-                        ),
-                      ),
-                     
-                      Padding(
-                        padding: EdgeInsets.symmetric(
-                            vertical: height(context, 0.16),
-                            horizontal: width(context, 0.04)),
-                        child: Align(
-                          alignment: Alignment.topLeft,
-                          child: InkWell(
-                            onTap: () {
-                              setState(() {
-                                showSearch = !showSearch;
-                              });
+                            title: Constants.confirmLocation,
+                            onPressed: () {
+                              showAddressButtomSheet(context , currentAddress!);
                             },
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                      color:
-                                          const ui.Color.fromARGB(200, 0, 0, 0),
-                                      borderRadius: BorderRadius.circular(500)),
-                                  child:  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 10, vertical: 10),
-                                    child: Icon(
-                                      CupertinoIcons.search,
-                                      color: showSearch
-                                    ? AppColors.orangeColor:AppColors.whiteColor,
-                                      size: 20,
-                                    ),
-                                  ),
-                                ),
-                                const MediumPadding(
-                                  horizental: true,
-                                ),
-                                showSearch
-                                    ? const SearchLocatonWidget()
-                                    : const SizedBox(),
-                              ],
-                            ),
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(
-                            vertical: height(context, 0.24),
-                            horizontal: width(context, 0.04)),
-                        child: Align(
-                          alignment: Alignment.topLeft,
-                          child: InkWell(
-                            onTap: moveCameraToMyLocation,
-                            child: Container(
-                              decoration: BoxDecoration(
-                                  color: const ui.Color.fromARGB(200, 0, 0, 0),
-                                  borderRadius: BorderRadius.circular(500)),
-                              child: Padding(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 10, vertical: 10),
-                                child: moveCameraLoader
-                                    ? const CupertinoActivityIndicator(
-                                        color: AppColors.purpleColor,
-                                        radius: 10,
-                                      )
-                                    : const Icon(
-                                        Icons.gps_fixed_rounded,
-                                        color: AppColors.whiteColor,
-                                        size: 20,
-                                      ),
-                              ),
-                            ),
-                          ),
-                        ),
+                      const SearchLocationWdget(),
+                      MyLocationWidget(
+                        moveCameraLoader: moveCameraLoader,
+                        onTap: moveCameraToMyLocation,
                       ),
                       SizedBox(
                         width: width(context, 1),
-                        height: height(context, 0.15),
+                        height: height(context, 0.18),
                         child: Image.asset(
                           Constants.headerImage,
                           fit: BoxFit.fill,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.only(
+                          left: width(context, 0.04),
+                          right: width(context, 0.04),
+                          top: height(context, 0.07),
+                          bottom: 0,
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            InkWell(
+                                onTap: () => Navigators.back(context),
+                                child: const Icon(
+                                  Icons.arrow_back_ios_new_rounded,
+                                  color: AppColors.whiteColor,
+                                )),
+                            Text(
+                              Constants.addAddress,
+                              style: getMediumStyle(
+                                  color: AppColors.whiteColor, fontSize: 20),
+                            ),
+                            const SizedBox()
+                          ],
                         ),
                       ),
                     ],

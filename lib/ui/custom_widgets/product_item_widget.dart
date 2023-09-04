@@ -1,4 +1,5 @@
 import 'package:medcloud/helper/import_helper.dart';
+import 'package:medcloud/ui/screens/product_details/product_details_screen.dart';
 
 class ProductItemWidget extends StatelessWidget {
   final String title;
@@ -23,88 +24,91 @@ class ProductItemWidget extends StatelessWidget {
           height: height(context, 0.315),
           child: Stack(
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ClipRRect(
-                    borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      topRight: Radius.circular(10),
+              InkWell(
+                onTap: () => Navigators.getTo(context, const ProductDetalsScreen()),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    ClipRRect(
+                      borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(10),
+                        topRight: Radius.circular(10),
+                      ),
+                      child: CustomNetworkImage(
+                        imagePath:
+                            image,
+                        height: height(context, 0.15),
+                        width: width(context, 0.43),
+                      ),
                     ),
-                    child: CustomNetworkImage(
-                      imagePath:
-                          image,
-                      height: height(context, 0.15),
-                      width: width(context, 0.43),
-                    ),
-                  ),
-                  Padding(
-                    padding:  EdgeInsets.symmetric(horizontal: width(context, 0.02),vertical: 5),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                         prand,
-                          style: getLightStyle(
-                            fontSize: 12,
-                            color: AppColors.mediumGrayColor,
+                    Padding(
+                      padding:  EdgeInsets.symmetric(horizontal: width(context, 0.02),vertical: 5),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                           prand,
+                            style: getLightStyle(
+                              fontSize: 12,
+                              color: AppColors.mediumGrayColor,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          height: height(context, 0.005),
-                        ),
-                        Text(
-                          title,
-                          style: getRegularStyle(
-                            fontSize: 14,
-                            color: AppColors.blackColor,
+                          SizedBox(
+                            height: height(context, 0.005),
                           ),
-                        ),
-                        SizedBox(
-                          height: height(context, 0.007),
-                        ),
-                        Text(
-                          price,
-                          style: getMediumStyle(
-                            fontSize: 16,
-                            color: AppColors.blackColor,
+                          Text(
+                            title,
+                            style: getRegularStyle(
+                              fontSize: 14,
+                              color: AppColors.blackColor,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          height: height(context, 0.015),
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: AppColors.purpleColor)),
-                          child: Padding(
-                            padding: EdgeInsets.symmetric(
-                                horizontal: width(context, 0.02), vertical: 5),
-                            child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  const Icon(
-                                    Icons.shopping_cart_rounded,
-                                    color: AppColors.purpleColor,
-                                    size: 20,
-                                  ),
-                                  const MediumPadding(
-                                    horizental: true,
-                                  ),
-                                  Text(
-                                    Constants.addToCart,
-                                    style: getRegularStyle(
-                                      fontSize: 13,
+                          SizedBox(
+                            height: height(context, 0.007),
+                          ),
+                          Text(
+                            price,
+                            style: getMediumStyle(
+                              fontSize: 16,
+                              color: AppColors.blackColor,
+                            ),
+                          ),
+                          SizedBox(
+                            height: height(context, 0.015),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(color: AppColors.purpleColor)),
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: width(context, 0.02), vertical: 5),
+                              child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    const Icon(
+                                      Icons.shopping_cart_rounded,
                                       color: AppColors.purpleColor,
+                                      size: 20,
                                     ),
-                                  )
-                                ]),
+                                    const MediumPadding(
+                                      horizental: true,
+                                    ),
+                                    Text(
+                                      Constants.addToCart,
+                                      style: getRegularStyle(
+                                        fontSize: 13,
+                                        color: AppColors.purpleColor,
+                                      ),
+                                    )
+                                  ]),
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                  )
-                ],
+                        ],
+                      ),
+                    )
+                  ],
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 8),
@@ -112,12 +116,12 @@ class ProductItemWidget extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
-                        color: const Color.fromARGB(108, 0, 0, 0),
+                        color: Color.fromARGB(108, 0, 0, 0),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(5.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(5.0),
                         child: Icon(
                           Icons.favorite,
                           color: AppColors.whiteColor,
@@ -126,12 +130,12 @@ class ProductItemWidget extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         shape: BoxShape.circle,
-                        color: const Color.fromARGB(108, 0, 0, 0),
+                        color: Color.fromARGB(108, 0, 0, 0),
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(5.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(5.0),
                         child: Icon(
                           Icons.share,
                           color: AppColors.whiteColor,

@@ -8,6 +8,11 @@ class Constants {
   static const String upoudImage = '${mainAssetImagesPath}upload.png';
   static const String loaderImage = '${mainAssetImagesPath}loader.gif';
   static const String searchImage = '${mainAssetImagesPath}search_icon.png';
+  static const String applePayImage = '${mainAssetImagesPath}applepay.png';
+  static const String creditCardImage = '${mainAssetImagesPath}cards.png';
+  static const String cashImage = '${mainAssetImagesPath}cash_icon.png';
+  static const String checkIcon = '${mainAssetImagesPath}Radio  Check.png';
+  static const String personImage = '${mainAssetImagesPath}person_icon.png';
 
   //Strings
   static String loginSignUp = "Log in / Sign up".tr;
@@ -83,9 +88,50 @@ class Constants {
   static String confirmation = "Confirmation".tr;
   static String noAddress = "You have no registered address".tr;
   static String addAddress = "Add New Address".tr;
+  static String addAddressMap = "Add Address".tr;
+  static String confirmLocation = "Confirm Location".tr;
+  static String save = "Save".tr;
+  static String paymentMethod = "Payment Method".tr;
+  static String orderSummary = "Order Summary".tr;
+  static String couponVoucher = "Coupon or voucher?".tr;
+  static String yourProducts = "Your Products".tr;
+  static String applyNow = "Apply Now".tr;
+  static String creditCard = "Credit Card".tr;
+  static String applePay = "Apple Pay".tr;
+  static String cashDelivery = "Cash on Delivery".tr;
+  static String subTotal = "SubTotal".tr;
+  static String shipping = "Shipping".tr;
+  static String totalCost = "Total Cost".tr;
+  static String promoCode = "Promo Code".tr;
+  static String completeOrder = "Complete Order".tr;
+  static String sucsessOrder =
+      'You have successfully completed the order Order No.:'.tr;
+  static String reviews = "Reviews".tr;
+  static String description = "Description".tr;
+  static String showMore = "Show More".tr;
 
 //to update  strings when change language
   static void update() {
+    reviews = "Reviews".tr;
+    description = "Description".tr;
+    showMore = "Show More".tr;
+    sucsessOrder = 'You have successfully completed the order Order No.:'.tr;
+    completeOrder = "Complete Order".tr;
+    promoCode = "Promo Code".tr;
+    subTotal = "SubTotal".tr;
+    shipping = "Shipping".tr;
+    totalCost = "Total Cost".tr;
+    creditCard = "Credit Card".tr;
+    applePay = "Apple Pay".tr;
+    cashDelivery = "Cash on Delivery".tr;
+    paymentMethod = "Payment Method".tr;
+    orderSummary = "Order Summary".tr;
+    couponVoucher = "Coupon or voucher?".tr;
+    yourProducts = "Your Products".tr;
+    applyNow = "Apply Now".tr;
+    save = "Save".tr;
+    addAddressMap = "Add Address".tr;
+    confirmLocation = "Confirm Location".tr;
     wantFreeShippingAdd = "Want Free Shipping? Add".tr;
     more = "more".tr;
     sar = "SAR".tr;

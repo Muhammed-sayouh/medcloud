@@ -27,7 +27,7 @@ class CheckOutWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  '2 Products',
+                  '2 ${Constants.products}',
                   style: getRegularStyle(fontSize: 18),
                 ),
                 Text(
