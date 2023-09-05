@@ -1,12 +1,12 @@
 import 'package:medcloud/helper/import_helper.dart';
 import 'package:medcloud/ui/custom_widgets/product_item_widget.dart';
 import 'package:medcloud/ui/custom_widgets/title_widget.dart';
-import 'package:medcloud/ui/screens/clinic_details/widgets/info_widget.dart';
 
 import '../categories/widgets/show_filter_buttom_sheet.dart';
+import 'widgets/info_widget.dart';
 
-class ClinicDetailsScreen extends StatelessWidget {
-  const ClinicDetailsScreen({super.key});
+class DoctorDetailsScreen extends StatelessWidget {
+  const DoctorDetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,14 +27,8 @@ class ClinicDetailsScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const ClinicInfoClinicDetailsScreenWidget(),
-                    const BigPadding(),
-                    SizedBox(
-                      child: Text(
-                        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut",
-                        style: getRegularStyle(fontSize: 12),
-                      ),
-                    ),
+                    const DoctorInfoWidget(),
+                 
                     const MediumPadding(),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(15),
@@ -42,14 +36,14 @@ class ClinicDetailsScreen extends StatelessWidget {
                         height: height(context, 0.15),
                         width: width(context, 1),
                         child: Image.network(
-                          "https://www.interdent.com/gentle-dental/wp-content/uploads/sites/2/2019/02/bigstock-195196330.jpg",
+                           "https://www.interdent.com/gentle-dental/wp-content/uploads/sites/2/2019/02/bigstock-195196330.jpg",
                           fit: BoxFit.fill,
                         ),
                       ),
                     ),
                     const MediumPadding(),
                     TitleWdget(
-                      title: Constants.clinicProduct,
+                      title: Constants.doctorProduct,
                       subTitleColor: AppColors.mediumGrayColor,
                       subTitle: "20 ${Constants.products}",
                     ),

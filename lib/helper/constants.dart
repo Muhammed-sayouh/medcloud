@@ -61,6 +61,8 @@ class Constants {
   static String profile = "Profile".tr;
   static String wishlist = "Wishlist".tr;
   static String clinics = "Clinics".tr;
+  static String clinicProduct = "Clinic Products".tr;
+  static String doctorProduct = "Doctor Products".tr;
   static String doctors = "Doctors".tr;
   static String bestProducts = "Best Products".tr;
   static String newArrival = "New Arrival".tr;
@@ -109,9 +111,55 @@ class Constants {
   static String reviews = "Reviews".tr;
   static String description = "Description".tr;
   static String showMore = "Show More".tr;
+  static String orders = "Orders".tr;
+  static String wallet = "Wallet".tr;
+  static String helpCenter = "Help Center".tr;
+  static String signOut = "Sign Out".tr;
+  static String activeOrders = "Active Orders".tr;
+  static String previousOrders = "Previous Orders".tr;
+  static String pending = "Pending".tr;
+  static String processing = "Processing".tr;
+  static String completed = "Completed".tr;
+  static String cancelled = "Cancelled".tr;
+  static String rejected = "Rejected".tr;
+  static String orderDetails = "Order Details".tr;
+  static String deliveryAddress = "Delivery Address".tr;
+  static String yourProduct = "Your Product".tr;
+  static String review = "Review".tr;
+  static String shipped = "Shipped".tr;
+  static String delivered = "Delivered".tr;
+  static String reorder = "Reorder".tr;
+  static String paid = "Paid".tr;
+  static String coupon = "Coupon".tr;
+    
+
+
+  
 
 //to update  strings when change language
   static void update() {
+    coupon = "Coupon".tr;
+    paid = "Paid".tr;
+    reorder = "Reorder".tr;
+    orderDetails = "Order Details".tr;
+    deliveryAddress = "Delivery Address".tr;
+    yourProduct = "Your Product".tr;
+    review = "Review".tr;
+    shipped = "Shipped".tr;
+    delivered = "Delivered".tr;
+    pending = "Pending".tr;
+    processing = "Processing".tr;
+    completed = "Completed".tr;
+    cancelled = "Cancelled".tr;
+    rejected = "Rejected".tr;
+    activeOrders = "Active Orders".tr;
+    previousOrders = "Previous Orders".tr;
+    helpCenter = "Help Center".tr;
+    signOut = "Sign Out".tr;
+    orders = "Orders".tr;
+    wallet = "Wallet".tr;
+    doctorProduct = "Doctor Products".tr;
+    clinicProduct = "Clinic Products".tr;
     reviews = "Reviews".tr;
     description = "Description".tr;
     showMore = "Show More".tr;

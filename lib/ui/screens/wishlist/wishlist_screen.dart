@@ -1,5 +1,4 @@
 import 'package:medcloud/helper/import_helper.dart';
-import 'package:medcloud/ui/custom_widgets/common_circle_widget.dart';
 import 'package:medcloud/ui/custom_widgets/product_item_widget.dart';
 
 class WishlistScreen extends StatelessWidget {

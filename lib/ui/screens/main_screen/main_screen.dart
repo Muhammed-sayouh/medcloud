@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:medcloud/helper/import_helper.dart';
 import 'package:medcloud/ui/screens/cart/cart_screen.dart';
 import 'package:medcloud/ui/screens/categories/categories_screen.dart';
 import 'package:medcloud/ui/screens/home/home_screen.dart';
+import 'package:medcloud/ui/screens/profile/profile_screen.dart';
 import 'package:medcloud/ui/screens/wishlist/wishlist_screen.dart';
 
 /// Flutter code sample for [BottomNavigationBar].
@@ -24,10 +24,7 @@ class _MainScreenState extends State<MainScreen> {
     CategoriesScreen(),
     CartScreen(),
     WishlistScreen(),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    ProfileScreen(),
   ];
 
   void _onItemTapped(int index) {

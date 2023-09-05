@@ -3,12 +3,13 @@ import 'package:medcloud/helper/import_helper.dart';
 class OrderSummaryWidget extends StatefulWidget {
   final String title;
   final String widget;
+  final Color widgetColor;
   final bool hideDivider;
   const OrderSummaryWidget({
     super.key,
     required this.title,
     required this.widget,
-    this.hideDivider = true,
+    this.hideDivider = true,   this.widgetColor = AppColors.blackColor,
   });
 
   @override
@@ -16,7 +17,6 @@ class OrderSummaryWidget extends StatefulWidget {
 }
 
 class _OrderSummaryWidgetState extends State<OrderSummaryWidget> {
-  bool isSelected = false;
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +24,11 @@ class _OrderSummaryWidgetState extends State<OrderSummaryWidget> {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(
-   horizontal: width(context, 0.03,),
-
-   vertical: 5
-          ),
+              horizontal: width(
+                context,
+                0.03,
+              ),
+              vertical: 5),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -37,7 +38,7 @@ class _OrderSummaryWidgetState extends State<OrderSummaryWidget> {
               ),
               Text(
                 "${widget.widget} ${Constants.sar}",
-                style: getRegularStyle(fontSize: 14),
+                style: getRegularStyle(fontSize: 14 , color:widget.widgetColor ),
               )
             ],
           ),

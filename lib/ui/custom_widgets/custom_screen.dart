@@ -5,6 +5,7 @@ class CustomScreen extends StatelessWidget {
   final Widget child;
   final bool hideBack;
   final bool hideClose;
+  final Widget? changedColseIconWidget;
   final Widget? extraWidget;
   final bool removebottomPaddng;
   final String? title;
@@ -16,7 +17,9 @@ class CustomScreen extends StatelessWidget {
       this.hideClose = false,
       this.extraWidget,
       this.removebottomPaddng = false,
-      this.title, this.headerWidget});
+      this.title,
+      this.headerWidget,
+      this.changedColseIconWidget});
 
   @override
   Widget build(BuildContext context) {
@@ -24,17 +27,19 @@ class CustomScreen extends StatelessWidget {
       children: [
         Stack(
           children: [
-        headerWidget==null? const SizedBox():   Container(
-              height: height(context, 0.24),
-              width: width(context, 1),
-              color: AppColors.whiteColor,
-              child: Column(
-                children: [
-                  Spacer(),
-                  headerWidget!,
-                ],
-              ),
-            ),
+            headerWidget == null
+                ? const SizedBox()
+                : Container(
+                    height: height(context, 0.24),
+                    width: width(context, 1),
+                    color: AppColors.whiteColor,
+                    child: Column(
+                      children: [
+                        const Spacer(),
+                        headerWidget!,
+                      ],
+                    ),
+                  ),
             SizedBox(
               width: width(context, 1),
               height: height(context, 0.2),
@@ -70,6 +75,10 @@ class CustomScreen extends StatelessWidget {
                                 color: AppColors.whiteColor, fontSize: 20),
                           ),
                         ),
+            //  changedColseIconWidget == null 
+            //           ? const SizedBox()
+            //           : const Spacer(),
+            //       changedColseIconWidget ?? const SizedBox(),
                   hideClose
                       ? const SizedBox()
                       : InkWell(

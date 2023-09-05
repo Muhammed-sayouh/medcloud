@@ -115,6 +115,20 @@ class ProductItemWidget extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                        Container(
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Color.fromARGB(108, 0, 0, 0),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.all(5.0),
+                        child: Icon(
+                          Icons.share,
+                          color: AppColors.whiteColor,
+                          size: 20,
+                        ),
+                      ),
+                    ),
                     Container(
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle,
@@ -129,20 +143,7 @@ class ProductItemWidget extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Color.fromARGB(108, 0, 0, 0),
-                      ),
-                      child: const Padding(
-                        padding: EdgeInsets.all(5.0),
-                        child: Icon(
-                          Icons.share,
-                          color: AppColors.whiteColor,
-                          size: 20,
-                        ),
-                      ),
-                    ),
+                
                   ],
                 ),
               )
