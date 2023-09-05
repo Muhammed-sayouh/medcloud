@@ -137,9 +137,25 @@ class Constants {
   static String balanceTotal = "Balance Total".tr;
   static String history = "History".tr;
   static String refund = "Refund".tr;
+  static String bankName = "Bank Name".tr;
+  static String accountName = "Account Name".tr;
+  static String accountNumber = "Account Number".tr;
+  static String iBAN = "IBAN".tr;
+  static String delete = "Delete".tr;
+  static String edit = "Edit".tr;
+  static String addNewAccount = "Add New Account".tr;
+  static String location = "Location".tr;
 
 //to update  strings when change language
   static void update() {
+    location = "Location".tr;
+    edit = "Edit".tr;
+    bankName = "Bank Name".tr;
+    accountName = "Account Name".tr;
+    accountNumber = "Account Number".tr;
+    iBAN = "IBAN".tr;
+    delete = "Delete".tr;
+    addNewAccount = "Add New Account".tr;
     balanceTotal = "Balance Total".tr;
     history = "History".tr;
     refund = "Refund".tr;

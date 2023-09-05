@@ -1,5 +1,6 @@
 import 'package:medcloud/helper/import_helper.dart';
 import 'package:medcloud/ui/custom_widgets/custom_button.dart';
+import 'package:medcloud/ui/screens/wallet_cashout/wallet_cashout_screen.dart';
 
 class WalletScreen extends StatelessWidget {
   const WalletScreen({super.key});
@@ -41,6 +42,8 @@ class WalletScreen extends StatelessWidget {
                           ],
                         ),
                         CustomButton(
+                          onPressed: () =>
+                              Navigators.getTo(context, const WalletCashOut()),
                           title: Constants.checkout,
                           hightRatio: 0.05,
                           widthRatio: 0.35,
@@ -80,7 +83,6 @@ class WalletScreen extends StatelessWidget {
                           ],
                         ),
                         Column(
-
                           children: [
                             Text(
                               "06/07/2021",

@@ -1,6 +1,8 @@
 import 'package:medcloud/helper/import_helper.dart';
 import 'package:medcloud/ui/custom_widgets/title_widget.dart';
 import 'package:medcloud/ui/custom_widgets/top_search_bar_wdget.dart';
+import 'package:medcloud/ui/screens/all_clinics/all_clinics_screen.dart';
+import 'package:medcloud/ui/screens/all_doctors/all_doctors_screen.dart';
 import 'package:medcloud/ui/screens/home/widgets/best_product_widget.dart';
 import 'package:medcloud/ui/screens/home/widgets/clinics_wiget.dart';
 import 'package:medcloud/ui/screens/home/widgets/doctors_wiget.dart';
@@ -40,12 +42,14 @@ class HomeScreen extends StatelessWidget {
                 TitleWdget(
                   title: Constants.clinics,
                   subTitle: Constants.viewAll,
+                  onTap: () => Navigators.getTo(context, const AllClinincsScreen()),
                 ),
                 const SmallPadding(),
                 const ClinicsWidgetHomeScreen(),
                 TitleWdget(
                   title: Constants.doctors,
                   subTitle: Constants.viewAll,
+                     onTap: () => Navigators.getTo(context, const AllDoctorsScreen()),
                 ),
                 const SmallPadding(),
                 const DoctorsWidgetHomeScreen(),
@@ -63,6 +67,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 const SmallPadding(),
                 const BestProductHomeScreen(),
+                SizedBox(height: height(context, 0.1),)
               ],
             ),
           )),

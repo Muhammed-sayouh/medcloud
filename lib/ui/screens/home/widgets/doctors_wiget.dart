@@ -18,7 +18,7 @@ class DoctorsWidgetHomeScreen extends StatelessWidget {
         itemBuilder: (context, index) => InkWell(
           onTap: () => Navigators.getTo(context, const DoctorDetailsScreen()),
           child: const CommonCircleWidget(
-            title: "Doctor Name",
+            title: "Doctor",
             image:
                 "https://t4.ftcdn.net/jpg/02/60/04/09/360_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5.jpg",
           ),

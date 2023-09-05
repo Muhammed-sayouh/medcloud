@@ -119,8 +119,17 @@ Map<String, String> getArabicLanguage() {
     "Qty": "الكمية",
     "Review Product": "تقييم المنتج",
     "Cancel": "الغاء",
-        "Balance Total": "إجمالي الرصيد",
+    "Balance Total": "إجمالي الرصيد",
     "History": "التاريخ",
     "Refund": "استرداد",
+    "Bank Name": "اسم البنك",
+    "Account Name": "اسم الحساب",
+    "Account Number": "رقم الحساب",
+    "IBAN": "الآيبان",
+    "Delete": "حذف",
+    "Add New Account": "إضافة حساب جديد",
+    "Edit": "تعديل",
+    "Location":"الموقع",
+
   };
 }

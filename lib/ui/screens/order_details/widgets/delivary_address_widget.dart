@@ -1,8 +1,11 @@
 import 'package:medcloud/helper/import_helper.dart';
+import 'package:medcloud/ui/screens/map/widgets/show_address_buttom_sheet.dart';
 
 class DelivaryAddressWidget extends StatelessWidget {
+  final bool profileScreen;
   const DelivaryAddressWidget({
     super.key,
+    this.profileScreen = false,
   });
 
   @override
@@ -29,9 +32,53 @@ class DelivaryAddressWidget extends StatelessWidget {
               content: "+966509000000",
             ),
             DelivartAddressesWidget(
-              title: "Locaton",
+              title: Constants.location,
               content: "AlJamoum",
             ),
+            !profileScreen
+                ? const SizedBox()
+                : const Divider(
+                    thickness: 2,
+                  ),
+            !profileScreen
+                ? const SizedBox()
+                : Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Align(
+                            alignment: Alignment.centerRight,
+                            child: Row(
+                              children: [
+                                InkWell(
+                                  onTap: () => showAddressButtomSheet(
+                                      context, "Makkah, Jumum, 2124354657543",
+                                      noAction: true),
+                                  child: Row(
+                                    children: [
+                                      const Icon(Icons.edit),
+                                      Text(Constants.edit),
+                                    ],
+                                  ),
+                                ),
+                                const MediumPadding(
+                                  horizental: true,
+                                ),
+                                Row(
+                                  children: [
+                                    const Icon(Icons.delete),
+                                    Text(Constants.delete),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
           ],
         ),
       ),

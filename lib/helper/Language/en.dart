@@ -122,5 +122,14 @@ Map<String, String> getEnglishLanguage() {
     "Balance Total": "Balance Total",
     "History": "History",
     "Refund": "Refund",
+    "Bank Name": "Bank Name",
+    "Account Name": "Account Name",
+    "Account Number": "Account Number",
+    "IBAN": "IBAN",
+    "Delete": "Delete",
+    "Add New Account": "Add New Account",
+    "Edit":"Edit",
+    "Location":"Location",
+    
   };
 }

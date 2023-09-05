@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:medcloud/helper/import_helper.dart';
+import 'package:medcloud/ui/screens/address/address_screen.dart';
 import 'package:medcloud/ui/screens/intro/intro_screen.dart';
 import 'package:medcloud/ui/screens/orders/orders_screen.dart';
 import 'package:medcloud/ui/screens/profile/widgets/user_nfo_widget.dart';
@@ -11,6 +12,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScreen(
+      
       hideBack: true,
       hideClose: true,
       child: Padding(
@@ -33,6 +35,7 @@ class ProfileScreen extends StatelessWidget {
                   title: Constants.wallet,
                 ),
                 TapsProfleWidget(
+                    onTap: () => Navigators.getTo(context, const AddAressProfileScreen()),
                   image: CupertinoIcons.location_solid,
                   title: Constants.address,
                 ),

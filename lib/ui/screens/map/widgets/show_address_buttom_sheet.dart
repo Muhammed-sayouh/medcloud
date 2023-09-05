@@ -5,7 +5,7 @@ import 'package:medcloud/ui/custom_widgets/custom_text_form.dart';
 import 'package:medcloud/ui/custom_widgets/text_form_icon_widget.dart';
 import 'package:medcloud/ui/screens/checkout/checkout_screen.dart';
 
-void showAddressButtomSheet(BuildContext context, String address) {
+void showAddressButtomSheet(BuildContext context, String address , {bool noAction = false}) {
   showModalBottomSheet(
     isScrollControlled: true,
     shape: const RoundedRectangleBorder(
@@ -104,7 +104,7 @@ void showAddressButtomSheet(BuildContext context, String address) {
               Padding(
                 padding: commonPaddingHorizental(context),
                 child: InkWell(
-                  onTap: () => Navigators.getTo(context, const CheckoutScreen()),
+                  onTap:noAction? () => Navigators.back(context):() => Navigators.getTo(context, const CheckoutScreen()),
                   child: Container(
                     height: height(context, 0.055),
                     width: width(context, 0.8),
