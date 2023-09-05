@@ -115,6 +115,12 @@ Map<String, String> getEnglishLanguage() {
     "Delivered": "Delivered",
     "Reorder": "Reorder",
     "Paid": "Paid",
-    "Coupon":"Coupon",
+    "Coupon": "Coupon",
+    "Qty": "Qty",
+    "Review Product": "Review Product",
+    "Cancel": "Cancel",
+    "Balance Total": "Balance Total",
+    "History": "History",
+    "Refund": "Refund",
   };
 }

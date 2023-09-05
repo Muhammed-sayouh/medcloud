@@ -131,13 +131,21 @@ class Constants {
   static String reorder = "Reorder".tr;
   static String paid = "Paid".tr;
   static String coupon = "Coupon".tr;
-    
-
-
-  
+  static String qty = "Qty".tr;
+  static String reviewProduct = "Review Product".tr;
+  static String cancel = "Cancel".tr;
+  static String balanceTotal = "Balance Total".tr;
+  static String history = "History".tr;
+  static String refund = "Refund".tr;
 
 //to update  strings when change language
   static void update() {
+    balanceTotal = "Balance Total".tr;
+    history = "History".tr;
+    refund = "Refund".tr;
+    reviewProduct = "Review Product".tr;
+    cancel = "Cancel".tr;
+    qty = "Qty".tr;
     coupon = "Coupon".tr;
     paid = "Paid".tr;
     reorder = "Reorder".tr;

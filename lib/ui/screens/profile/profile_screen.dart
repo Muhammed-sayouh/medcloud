@@ -3,6 +3,7 @@ import 'package:medcloud/helper/import_helper.dart';
 import 'package:medcloud/ui/screens/intro/intro_screen.dart';
 import 'package:medcloud/ui/screens/orders/orders_screen.dart';
 import 'package:medcloud/ui/screens/profile/widgets/user_nfo_widget.dart';
+import 'package:medcloud/ui/screens/wallet/wallet_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -27,6 +28,7 @@ class ProfileScreen extends StatelessWidget {
                   title: Constants.orders,
                 ),
                 TapsProfleWidget(
+                    onTap: () => Navigators.getTo(context, const WalletScreen()),
                   image: Icons.account_balance_wallet_rounded,
                   title: Constants.wallet,
                 ),

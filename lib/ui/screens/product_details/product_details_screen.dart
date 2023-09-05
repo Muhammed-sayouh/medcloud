@@ -75,13 +75,13 @@ class ProductDetalsScreen extends StatelessWidget {
                   ),
                   ExpandedItemDetailsWdget(
                     title: "${Constants.reviews} 128",
-                    widget: CommentWidgetProductDetailsWidget(),
+                    widget: const CommentWidgetProductDetailsWidget(),
                   ),
                 ],
               ),
             ),
           ),
-          Align(
+          const Align(
             alignment: Alignment.bottomCenter,
             child: BottomWidgetProductDetailssScreen(),
           )
@@ -158,11 +158,11 @@ class _BottomWidgetProductDetailssScreenState
               title: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.shopping_cart,
                     color: AppColors.whiteColor,
                   ),
-                  MediumPadding(
+                  const MediumPadding(
                     horizental: true,
                   ),
                   Text(
