@@ -35,7 +35,7 @@ class _ExpandedFilterdWidgetState extends State<ExpandedFilterdWidget> {
                 style: getRegularStyle(fontSize: 15),
               ),
                Icon(
-            expanded ? CupertinoIcons.chevron_down:   CupertinoIcons.chevron_forward,
+            expanded ? CupertinoIcons.chevron_down:  Constants.getLanguage() == 'ar'?CupertinoIcons.chevron_back :CupertinoIcons.chevron_forward,
                 size: 20,
               ),
             ],

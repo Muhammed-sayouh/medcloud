@@ -145,9 +145,25 @@ class Constants {
   static String edit = "Edit".tr;
   static String addNewAccount = "Add New Account".tr;
   static String location = "Location".tr;
+  static String notifications = "Notifications".tr;
+  static String cashout = "cashout".tr;
+  static String changePassword = "Change Password".tr;
+  static String editProfile = "Edit Profile".tr;
+  static String currentPassword = "Current Password".tr;
+  static String newPassword = "New Password".tr;
+  static String confirmNewPassword = "Confirm New Password".tr;
+  static String message = "Message".tr;
 
 //to update  strings when change language
   static void update() {
+    message = "Message".tr;
+    currentPassword = "Current Password".tr;
+    newPassword = "New Password".tr;
+    confirmNewPassword = "Confirm New Password".tr;
+    changePassword = "Change Password".tr;
+    editProfile = "Edit Profile".tr;
+    cashout = "cashout".tr;
+    notifications = "Notifications".tr;
     location = "Location".tr;
     edit = "Edit".tr;
     bankName = "Bank Name".tr;

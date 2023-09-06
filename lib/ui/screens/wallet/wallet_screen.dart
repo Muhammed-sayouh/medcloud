@@ -44,7 +44,7 @@ class WalletScreen extends StatelessWidget {
                         CustomButton(
                           onPressed: () =>
                               Navigators.getTo(context, const WalletCashOut()),
-                          title: Constants.checkout,
+                          title: Constants.cashout,
                           hightRatio: 0.05,
                           widthRatio: 0.35,
                         )

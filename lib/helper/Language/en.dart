@@ -128,8 +128,15 @@ Map<String, String> getEnglishLanguage() {
     "IBAN": "IBAN",
     "Delete": "Delete",
     "Add New Account": "Add New Account",
-    "Edit":"Edit",
-    "Location":"Location",
-    
+    "Edit": "Edit",
+    "Location": "Location",
+    "Notifications": "Notifications",
+    "cashout": "cashout",
+    "Change Password": "Change Password",
+    "Edit Profile": "Edit Profile",
+    "Current Password": "Current Password",
+    "New Password": "New Password",
+    "Confirm New Password": "Confirm New Password",
+    "Message":"Message",
   };
 }

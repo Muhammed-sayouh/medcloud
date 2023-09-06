@@ -129,7 +129,14 @@ Map<String, String> getArabicLanguage() {
     "Delete": "حذف",
     "Add New Account": "إضافة حساب جديد",
     "Edit": "تعديل",
-    "Location":"الموقع",
-
+    "Location": "الموقع",
+    "Notifications": "الإشعارات",
+    "cashout": "المصروفات",
+    "Change Password": "تغير كلمة المرور",
+    "Edit Profile": "تعديل الملف الشخصي",
+        "Current Password": "كلمة المرور الحاليه",
+    "New Password": "كلمة المرور الجديدة",
+    "Confirm New Password": "تأكيد كلمة المرور الجديدة",
+    "Message":"الرسالة"
   };
 }

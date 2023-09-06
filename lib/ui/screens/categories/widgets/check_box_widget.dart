@@ -41,7 +41,7 @@ class _ChickBoxsWidgetState extends State<ChickBoxsWidget> {
                   width: width(context, 0.27),
                   child: Text(
                     Constants.highRating,
-                    style: getRegularStyle(fontSize: 14),
+                   style: getRegularStyle(fontSize:Constants.getLanguage() == 'ar'? 10:14),
                   ),
                 ),
               ],
@@ -64,8 +64,7 @@ class _ChickBoxsWidgetState extends State<ChickBoxsWidget> {
                 ),
                 Text(
                   Constants.priceHighToLow,
-                  style: getRegularStyle(fontSize: 14),
-                ),
+    style: getRegularStyle(fontSize:Constants.getLanguage() == 'ar'? 10:14),                ),
               ],
             ),
           ],
@@ -91,8 +90,7 @@ class _ChickBoxsWidgetState extends State<ChickBoxsWidget> {
                     width: width(context, 0.27),
                   child: Text(
                     Constants.mostPopular,
-                    style: getRegularStyle(fontSize: 14),
-                  ),
+    style: getRegularStyle(fontSize:Constants.getLanguage() == 'ar'? 10:14),                  ),
                 ),
               ],
             ),
@@ -114,8 +112,7 @@ class _ChickBoxsWidgetState extends State<ChickBoxsWidget> {
                 ),
                 Text(
                   Constants.priceLowToHigh,
-                  style: getRegularStyle(fontSize: 14),
-                ),
+    style: getRegularStyle(fontSize:Constants.getLanguage() == 'ar'? 10:14),                ),
               ],
             ),
           ],

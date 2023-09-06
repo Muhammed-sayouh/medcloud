@@ -11,8 +11,8 @@ class ClinicDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScreen(
-          hideClose: true,
+      body: CustomScreenX1(
+          
           changedColseIconWidget: InkWell(
               onTap: () => showFilterButtomSheet(context),
               child: const Icon(

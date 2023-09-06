@@ -62,10 +62,18 @@ class CustomScreen extends StatelessWidget {
                       ? const SizedBox()
                       : InkWell(
                           onTap: () => Navigators.back(context),
-                          child: const Icon(
-                            Icons.arrow_back_ios_new_rounded,
-                            color: AppColors.whiteColor,
-                          )),
+                          child: Constants.getLanguage() == 'ar'
+                              ? const RotatedBox(
+                                  quarterTurns: 2,
+                                  child: Icon(
+                                    Icons.arrow_forward_ios_sharp,
+                                    color: AppColors.whiteColor,
+                                  ))
+                              : const Icon(
+                                  Icons.arrow_back_ios_new_rounded,
+                                  color: AppColors.whiteColor,
+                                ),
+                        ),
                   title == null
                       ? const SizedBox()
                       : Center(
@@ -143,10 +151,17 @@ class CustomScreenX1 extends StatelessWidget {
                       ? const SizedBox()
                       : InkWell(
                           onTap: () => Navigators.back(context),
-                          child: const Icon(
-                            Icons.arrow_back_ios_new_rounded,
-                            color: AppColors.whiteColor,
-                          )),
+                          child: Constants.getLanguage() == 'ar'
+                              ? const RotatedBox(
+                                  quarterTurns: 2,
+                                  child: Icon(
+                                    Icons.arrow_forward_ios_sharp,
+                                    color: AppColors.whiteColor,
+                                  ))
+                              : const Icon(
+                                  Icons.arrow_back_ios_new_rounded,
+                                  color: AppColors.whiteColor,
+                                ),),
                   title == null
                       ? const SizedBox()
                       : Center(
@@ -156,7 +171,6 @@ class CustomScreenX1 extends StatelessWidget {
                                 color: AppColors.whiteColor, fontSize: 20),
                           ),
                         ),
-              
                   changedColseIconWidget ?? const SizedBox(),
                 ],
               ),

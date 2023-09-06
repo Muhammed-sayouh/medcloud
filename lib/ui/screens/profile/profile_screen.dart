@@ -1,9 +1,14 @@
 import 'package:flutter/cupertino.dart';
+import 'package:google_places_flutter/model/prediction.dart';
 import 'package:medcloud/helper/import_helper.dart';
+import 'package:medcloud/ui/screens/about_us/about_us_screen.dart';
 import 'package:medcloud/ui/screens/address/address_screen.dart';
+import 'package:medcloud/ui/screens/help_center/help_center_screen.dart';
 import 'package:medcloud/ui/screens/intro/intro_screen.dart';
 import 'package:medcloud/ui/screens/orders/orders_screen.dart';
 import 'package:medcloud/ui/screens/profile/widgets/user_nfo_widget.dart';
+import 'package:medcloud/ui/screens/q_a/q_a_screen.dart';
+import 'package:medcloud/ui/screens/terms/terms.dart';
 import 'package:medcloud/ui/screens/wallet/wallet_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -12,7 +17,6 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScreen(
-      
       hideBack: true,
       hideClose: true,
       child: Padding(
@@ -30,12 +34,13 @@ class ProfileScreen extends StatelessWidget {
                   title: Constants.orders,
                 ),
                 TapsProfleWidget(
-                    onTap: () => Navigators.getTo(context, const WalletScreen()),
+                  onTap: () => Navigators.getTo(context, const WalletScreen()),
                   image: Icons.account_balance_wallet_rounded,
                   title: Constants.wallet,
                 ),
                 TapsProfleWidget(
-                    onTap: () => Navigators.getTo(context, const AddAressProfileScreen()),
+                  onTap: () =>
+                      Navigators.getTo(context, const AddAressProfileScreen()),
                   image: CupertinoIcons.location_solid,
                   title: Constants.address,
                 ),
@@ -62,19 +67,25 @@ class ProfileScreen extends StatelessWidget {
                     ),
                     const Divider(),
                     RowItemIntroScreen(
-
+                      onTap: () =>
+                          Navigators.getTo(context, const AboutUsScreen()),
                       title: Constants.aboutUs,
                     ),
                     const Divider(),
                     RowItemIntroScreen(
+                      onTap: () =>
+                          Navigators.getTo(context, const TermsScreen()),
                       title: Constants.termsAndConditions,
                     ),
                     const Divider(),
                     RowItemIntroScreen(
+                      onTap: () => Navigators.getTo(context, const QAScreem()),
                       title: Constants.qA,
                     ),
                     const Divider(),
                     RowItemIntroScreen(
+                      onTap: () =>
+                          Navigators.getTo(context, const HelpCenterScreen()),
                       title: Constants.helpCenter,
                     ),
                     const Divider(),
@@ -82,8 +93,11 @@ class ProfileScreen extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            const Icon(Icons.logout_outlined, color: AppColors.purpleColor),
-                            const SmallPadding(horizental: true,),
+                            const Icon(Icons.logout_outlined,
+                                color: AppColors.purpleColor),
+                            const SmallPadding(
+                              horizental: true,
+                            ),
                             Text(
                               Constants.signOut,
                               style: getRegularStyle(
@@ -107,11 +121,12 @@ class ProfileScreen extends StatelessWidget {
 class TapsProfleWidget extends StatelessWidget {
   final String title;
   final IconData image;
- final void Function()? onTap;
+  final void Function()? onTap;
   const TapsProfleWidget({
     super.key,
     required this.title,
-    required this.image, this.onTap,
+    required this.image,
+    this.onTap,
   });
 
   @override

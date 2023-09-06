@@ -8,8 +8,8 @@ class OrdersScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScreen(
-          hideClose: true,
+      body: CustomScreenX1(
+         
           changedColseIconWidget: InkWell(
               onTap: () => showFilterButtomSheetOrders(context),
               child: const Icon(

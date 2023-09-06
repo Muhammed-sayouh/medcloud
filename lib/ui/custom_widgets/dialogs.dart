@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medcloud/helper/constants.dart';
 
 import '../theme/sizes/sizes.dart';
 
@@ -50,7 +51,7 @@ void customDialogWidget(BuildContext context, {required Widget widget}) {
         return AlertDialog(
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-          content: SizedBox(height: height(context, 0.45), child: widget),
+          content: SizedBox(height:Constants.getLanguage()=='ar'? height(context, 0.46):height(context, 0.45), child: widget),
         );
       });
 }
